@@ -5,7 +5,7 @@ $('#add').click(function() {
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 
-roundRect(ctx, 30, 10, 100, 40, 5, "#BCB6B6")
+roundRect(ctx, 30, 10, 100, 30, 9, "#BCB6B6", true)
 
 })
 });
@@ -32,6 +32,7 @@ function roundRect(ctx, x, y, width, height, radius, fill, stroke) {
     ctx.stroke();
   }
   if (fill) {
+  	ctx.fillStyle = fill;
     ctx.fill();
   }        
 }

@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 $('#add').click(function() {
 	alert('here is a form to add clothing');
-	$('#wardrobe').html('<canvas id="myCanvas" width="400" height="600"></canvas>');
+	$('#wardrobe').html('<canvas id="myCanvas" width="400" height="500"></canvas>');
 })
 });
 
