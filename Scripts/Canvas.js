@@ -2,6 +2,8 @@ $(document).ready(function() {
 
 $('#add').click(function() {
 
+$('#wardrobe').html('<canvas id="myCanvas" width="400" height="500"></canvas>');
+
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 

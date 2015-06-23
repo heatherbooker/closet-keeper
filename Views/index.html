@@ -1,25 +1,49 @@
-<html>
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bagoo Closet | Home</title>
+    <link rel="stylesheet" href="../Styles/foundation.css" />
+    <link rel="stylesheet" href="../Styles/app.css" />
+    <script src="../Scripts/foundationFiles/vendor/modernizr.js"></script>
+  </head>
+  <body>
+    
+    <div class="row">
+      <div class="large-12 columns">
+        <h1>BAGOO CLOSET</h1>
+      </div>
+    </div>
 
-	<head>
-		<script and style></script>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    	<link rel="stylesheet" type="text/css" href="style.css">
-    	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    	<script src="script.js"></script>
-	</head>
 
-	<body>
+<div id="menu">
+    <ul class="accordion" data-accordion>
+  <li class="accordion-navigation">
+    <a href="index.html">Home</a>
+  </li>
+  <li class="accordion-navigation">
+    <a href="#panel2a">Clothing</a>
+    <div id="panel2a" class="content">
+      hats and cats
+    </div>
+  </li>
+  <li class="accordion-navigation">
+    <a href="#panel3a">Outfits</a>
+    <div id="panel3a" class="content">
+      shirts and wurts
+    </div>
+  </li>
+</ul>
+</div>
 
-
-		<h1>BAGOO CLOSET</h1>
-
-		<img id="homepgShirt" src="http://images.clipartpanda.com/storage-clipart-yellow-shirt-on-a-hanger.png">
-
-		<br>
-
-		<a href="addClothing.html"><button id="enterSite" class="btn">ENTER</button></a>
-
-	</body>
-
+    
+    <script src="../Scripts/foundationFiles/vendor/jquery.js"></script>
+    <script src="../Scripts/foundationFiles/foundation.min.js"></script>
+    <script src="../Scripts/Model.js"></script>
+    <script src="../Scripts/Controller.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
 </html>
