@@ -18,12 +18,21 @@
 
     <div class="row">
         <div class="large-6 columns" id="menu">
-            <ul>
-                <li>Home
+            <ul class="accordion" data-accordion>
+                <li class="accordion-navigation">
+                    <a href="index.html">Home</a>
                 </li>
-                <li>Clothing
+                <li class="accordion-navigation">
+                    <a href="#panel2a">Clothing</a>
+                    <div id="panel2a" class="content">
+                        <a href="addClothing.html">hats and cats</a>
+                    </div>
                 </li>
-                <li>Outfits
+                <li class="accordion-navigation">
+                    <a href="#panel3a">Outfits</a>
+                    <div id="panel3a" class="content">
+                        <a href="#">shirts and wurts</a>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -45,5 +54,14 @@
 
     </div>
 
-    </body>
-    </html>
+
+    <script src="../Scripts/foundationFiles/vendor/jquery.js"></script>
+    <script src="../Scripts/foundationFiles/foundation.min.js"></script>
+    <script src="../Scripts/Model.js"></script>
+    <script src="../Scripts/Controller.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+</body>
+
+</html>
