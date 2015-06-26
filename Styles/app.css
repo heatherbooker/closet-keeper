@@ -1,21 +1,6 @@
-#menu {
-	width: 15%;
-	height: 600px;
-	background-color: #ECECEC;
+@media only screen and (max-width: 40em) {
+	body {
+		background-color: pink;
+	}
 }
-.accordion {
-	background-color: #F8BCD7;
-}
-#header {
-	text-align: center;
-	background-color: #B3B3B3;
-	border-radius: 5px;
-	margin-top: 10px;
-}
-h1 {
-	padding: 20px;
-}
-.row {
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
+	
