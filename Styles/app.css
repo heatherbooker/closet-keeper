@@ -1,6 +1,9 @@
-@media only screen and (max-width: 40em) {
+/*@media only screen and (max-width: 40em) {
 	body {
 		background-color: pink;
 	}
+}*/
+
+html {
+    overflow-y: scroll;
 }
-	
