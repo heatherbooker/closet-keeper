@@ -1,9 +1,25 @@
 /*@media only screen and (max-width: 40em) {
-	body {
-		background-color: pink;
+	#header {
+		font-size: 24px;
 	}
 }*/
 
 html {
     overflow-y: scroll;
 }
+
+h1 {
+	font-size: 6vw;
+}
+
+@media only screen and (min-width: 101px) and (max-width: 300px) {
+	h1 {
+		font-size: 18pt;
+	}
+}
+@media only screen and (min-width: 301px) and (max-width: 760px) {
+	h1 {
+		font-size: 9.5vw;
+	}
+}
+
