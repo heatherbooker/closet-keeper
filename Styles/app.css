@@ -9,21 +9,37 @@ html {
 }
 
 h1 {
-	font-size: 6vw;
-}
-
-@media only screen and (min-width: 101px) and (max-width: 300px) {
-	h1 {
-		font-size: 18pt;
-	}
-}
-@media only screen and (min-width: 301px) and (max-width: 760px) {
-	h1 {
-		font-size: 9.5vw;
-	}
+    font-size: 6vw;
 }
 
 .glyphicon-menu-hamburger {
-	font-size: 5.5vw;
+    font-size: 4vw;
 }
 
+.bagoo-slide-btn {
+    display: none;
+    margin-top: 5vw;
+}
+
+.bagoo-width {
+	min-height: 1px;
+	background: pink;
+}
+
+@media only screen and (min-width: 101px) and (max-width: 385px) {
+    h1 {
+        font-size: 7vw;
+    }
+    .bagoo-slide-btn {
+        display: block!important;
+    }
+}
+
+@media only screen and (min-width: 386px) and (max-width: 760px) {
+    h1 {
+        font-size: 9.5vw;
+    }
+    .bagoo-slide-btn {
+        display: block!important;
+    }
+}
