@@ -1,31 +1,25 @@
 html {
     overflow-y: scroll;
 }
-
 h1 {
     font-size: 5.75vw;
     margin-bottom: 0px;
     margin-top: 8px;
 }
-
 .glyphicon-menu-hamburger {
     font-size: 4vw;
 }
-
 .bagoo-slide-btn {
     display: none;
     margin-top: 2.25vw;
 }
-
 #page-content-wrapper {
     padding-top: 10px;
     padding-bottom: 3px;
 }
-
 .bagoo-arrow {
     font-size: 4vw;
 }
-
 /*.bagoo-col-R {
 	padding-left: 0px;
 }
@@ -39,28 +33,22 @@ h1 {
     margin: 3px 10px 2px 10px;
     padding-top: 2px;
 }
-
 .bagoo-btn-list {
     padding-left: 0px;
 }
-
 .bagoo-btn-link {
     padding-top: 2px;
     padding-bottom: 2px;
 }
-
 .bagoo-img-stack {
     list-style: none;
 }
-
 #bagoo-img-stack {
     padding-left: 0px;
 }
-
 .img-responsive {
     max-height: 16.5vw;
 }
-
 @media only screen and (max-width: 1000px) {
     .bagoo-btn-link {
         font-size: 1.6vw;
@@ -75,10 +63,9 @@ h1 {
         width: 200px;
     }
     .bagoo-arrow {
-    font-size: 26pt;
-	}
+        font-size: 26pt;
+    }
 }
-
 @media only screen and (max-width: 768px) {
     h1 {
         font-size: 8.5vw;
@@ -93,13 +80,11 @@ h1 {
         font-size: 3.3vw;
     }
 }
-
 @media only screen and (max-width: 640px) {
     .bagoo-btn-link {
         font-size: 3.677vw;
     }
 }
-
 @media only screen and (max-width: 450px) {
     .bagoo-btn {
         margin-left: 5px;

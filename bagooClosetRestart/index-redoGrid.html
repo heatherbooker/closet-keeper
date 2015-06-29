@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bagoo Closet | Home</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/normalize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- <link href="simple-sidebar.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="home.css">
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <!-- top bar with title and menu icon -->
+        <div class="row">
+
+            <!-- menu icon -->
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                <a href="#menu-toggle" class="btn btn-default bagoo-slide-btn" id="menu-toggle">
+                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+                </a>
+            </div>
+
+            <!-- title -->
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                <h1>BAGOO CLOSET</h1>
+            </div>
+        </div>
+
+
+        <!-- content and sidebar -->
+        <div class="row" id="wrapper">
+
+            <!-- sidebar menu -->
+            <div class="col-lg-3 col-md-3 col-xs-3">
+                <div id="sidebar-wrapper">
+                    <ul class="sidebar-nav">
+                        <li class="sidebar-brand">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li><a href="Views/browseClothing.html">Clothing</a>
+                        </li>
+                        <li><a href="Views/browseOutfits.html">Outfits</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- content -->
+            <div class="col-lg-6 col-md-6 col-xs-6">
+                <div class="col-lg-3 col-md-3 col-xs-3">
+                    arrow
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-6">
+                    imgs
+                </div>
+                <div class="col-lg-3 col-md-3 col-xs-3">
+                    arrow
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <!-- end container div -->
+    </div>
+
+
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+        $("#menu-toggle").click(function() {
+            $("#sidebar-wrapper").toggle();
+        });
+    </script>
+
+</body>
+
+</html>

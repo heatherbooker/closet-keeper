@@ -1,0 +1,93 @@
+html {
+    overflow-y: scroll;
+}
+h1 {
+    font-size: 5.75vw;
+    text-align: center;
+}
+ul {
+    margin-top: 10px;
+}
+
+
+.glyphicon-menu-hamburger {
+    font-size: 4vw;
+}
+.bagoo-slide-btn {
+    display: none;
+    margin-top: 2.25vw;
+}
+
+
+/*stolen sidebar css*/
+.sidebar-nav li {
+    line-height: 40px;
+}
+.sidebar-nav {
+    list-style: none;
+    margin-top: 20px;
+    padding-left: 0px;
+}
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #020202;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #A2A2A2;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 20px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #030303;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #9A9A9A;
+    background: none;
+}
+
+@media(max-width:768px) {
+    #sidebar-wrapper {
+        display: none;
+    }
+    .bagoo-slide-btn {
+        display: block!important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*end sidebar css*/
+
+
+
+div {
+    border: solid 1px grey;
+}
