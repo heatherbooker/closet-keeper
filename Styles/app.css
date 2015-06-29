@@ -3,91 +3,117 @@ html {
 }
 h1 {
     font-size: 5.75vw;
-    margin-bottom: 0px;
-    margin-top: 8px;
+    text-align: center;
+    margin-top: 14px;
 }
+ul {
+    margin-top: 10px;
+}
+
+
 .glyphicon-menu-hamburger {
-    font-size: 4vw;
+    font-size: 5vw;
 }
 .bagoo-slide-btn {
     display: none;
-    margin-top: 2.25vw;
+    margin-top: 3.3vw;
+    margin-left: 10px;
 }
-#page-content-wrapper {
-    padding-top: 10px;
-    padding-bottom: 3px;
-}
-.bagoo-arrow {
-    font-size: 4vw;
-}
-/*.bagoo-col-R {
-	padding-left: 0px;
+.bagoo-skinny-col {
+    padding-left: 7px;
+    padding-right: 7px;
 }
 
-.bagoo-col-L {
-	padding-right: 50px;
-}*/
 
-.bagoo-btn {
-    display: inline-block;
-    margin: 3px 10px 2px 10px;
-    padding-top: 2px;
+/*stolen sidebar css*/
+.sidebar-nav li {
+    line-height: 40px;
 }
-.bagoo-btn-list {
-    padding-left: 0px;
-}
-.bagoo-btn-link {
-    padding-top: 2px;
-    padding-bottom: 2px;
-}
-.bagoo-img-stack {
+.sidebar-nav {
     list-style: none;
-}
-#bagoo-img-stack {
+    margin-top: 20px;
     padding-left: 0px;
 }
-.img-responsive {
-    max-height: 16.5vw;
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #020202;
 }
-@media only screen and (max-width: 1000px) {
-    .bagoo-btn-link {
-        font-size: 1.6vw;
-        padding-left: 2px;
-        padding-right: 2px;
-    }
-    .bagoo-btn {
-        margin-left: 7px;
-        margin-right: 7px;
-    }
-    #wrapper.toggled #sidebar-wrapper {
-        width: 200px;
-    }
-    .bagoo-arrow {
-        font-size: 26pt;
-    }
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #A2A2A2;
+    background: rgba(255,255,255,0.2);
 }
-@media only screen and (max-width: 768px) {
-    h1 {
-        font-size: 8.5vw;
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 20px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #030303;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #9A9A9A;
+    background: none;
+}
+
+@media(max-width:768px) {
+    #sidebar-wrapper {
+        display: none;
     }
     .bagoo-slide-btn {
         display: block!important;
     }
-    .img-responsive {
-        max-height: 40vw;
-    }
-    .bagoo-btn-link {
-        font-size: 3.3vw;
+    h1 {
+        font-size: 9vw;
     }
 }
-@media only screen and (max-width: 640px) {
-    .bagoo-btn-link {
-        font-size: 3.677vw;
+@media(max-width:496px) {
+    .bagoo-slide-btn {
+        padding-left: 8px;
+        margin-top: 4vw;
+    }
+    .bagoo-skinny-col {
+        padding-left: auto;
+        padding-right: auto;
+        width: 17.2%;
+    }
+    .bagoo-less-padd {
+        /*padding-left: 6px;*/
+    }
+    .bagoo-title-col {
+        width: 82.8%;
     }
 }
-@media only screen and (max-width: 450px) {
-    .bagoo-btn {
-        margin-left: 5px;
-        margin-right: 2px;
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*end sidebar css*/
+
+
+
+div {
+    /*border: solid 1px grey;*/
 }
