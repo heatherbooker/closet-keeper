@@ -4,6 +4,7 @@ html {
 h1 {
     font-size: 5.75vw;
     text-align: center;
+    margin-top: 14px;
 }
 ul {
     margin-top: 10px;
@@ -11,11 +12,16 @@ ul {
 
 
 .glyphicon-menu-hamburger {
-    font-size: 4vw;
+    font-size: 5vw;
 }
 .bagoo-slide-btn {
     display: none;
-    margin-top: 2.25vw;
+    margin-top: 3.3vw;
+    margin-left: 10px;
+}
+.bagoo-skinny-col {
+    padding-left: 7px;
+    padding-right: 7px;
 }
 
 
@@ -67,6 +73,26 @@ ul {
     .bagoo-slide-btn {
         display: block!important;
     }
+    h1 {
+        font-size: 9vw;
+    }
+}
+@media(max-width:496px) {
+    .bagoo-slide-btn {
+        padding-left: 8px;
+        margin-top: 4vw;
+    }
+    .bagoo-skinny-col {
+        padding-left: auto;
+        padding-right: auto;
+        width: 17.2%;
+    }
+    .bagoo-less-padd {
+        /*padding-left: 6px;*/
+    }
+    .bagoo-title-col {
+        width: 82.8%;
+    }
 }
 
 
@@ -89,5 +115,5 @@ ul {
 
 
 div {
-    border: solid 1px grey;
+    /*border: solid 1px grey;*/
 }
