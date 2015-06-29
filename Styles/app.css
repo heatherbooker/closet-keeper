@@ -14,7 +14,7 @@ h1 {
 
 .bagoo-slide-btn {
     display: none;
-    margin-top: 2.5vw;
+    margin-top: 2.25vw;
 }
 
 #page-content-wrapper {
@@ -49,9 +49,24 @@ h1 {
 	max-height: 16.5vw;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 1000px) {
+	.bagoo-btn-link {
+	font-size: 1.6vw;
+	padding-left: 2px;
+	padding-right: 2px;
+	}
+	.bagoo-btn {
+		margin-left: 7px;
+		margin-right: 7px;
+	}
+	#wrapper.toggled #sidebar-wrapper {
+    width: 200px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
     h1 {
-        font-size: 8vw;
+        font-size: 8.5vw;
     }
     .bagoo-slide-btn {
         display: block!important;
@@ -60,12 +75,19 @@ h1 {
 	max-height: 40vw;
 	}
 	.bagoo-btn-link {
-	font-size: 8pt;
-	padding-left: 2px;
-	padding-right: 2px;
+	font-size: 3.3vw;
 	}
+}
+
+@media only screen and (max-width: 640px) {
+	.bagoo-btn-link {
+	font-size: 3.677vw;
+	}
+}
+
+@media only screen and (max-width: 450px) {
 	.bagoo-btn {
-		margin-left: 7px;
-		margin-right: 7px;
+	margin-left: 5px;
+	margin-right: 2px;
 	}
 }
