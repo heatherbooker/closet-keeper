@@ -9,8 +9,14 @@ h1 {
 ul {
     margin-top: 10px;
 }
+a {
+	color: #A5A5A5;
+}
+a:hover {
+	color: #353535;
+}
 
-
+/*menu icon*/
 .glyphicon-menu-hamburger {
     font-size: 5vw;
 }
@@ -22,6 +28,32 @@ ul {
 .bagoo-skinny-col {
     padding-left: 7px;
     padding-right: 7px;
+}
+
+/*"recommended outfit"*/
+.bagoo-img-stack {
+    list-style: none;
+}
+#bagoo-img-stack {
+    padding-left: 0px;
+}
+
+/*arrows*/
+.bagoo-arrow {
+    font-size: 4vw;
+    position: relative;
+    top: 30px;
+}
+.glyphicon-chevron-left {
+	margin-left: 8px;
+}
+.bagoo-arrow-contain {
+	line-height: 34vw;
+}
+
+/*buttons*/
+.bagoo-add-btn {
+	/*padding: 6 16 6 16;*/
 }
 
 
@@ -66,6 +98,29 @@ ul {
     background: none;
 }
 
+
+/*media queries*/
+
+
+/*small screens*/
+@media(max-width:992px) {
+	.bagoo-btm-btn {
+		font-size: 1vw;
+		padding: 6px;
+	}
+}
+
+@media(max-width:825px) {
+	.bagoo-btm-btn {
+		font-size: 1vw;
+		padding: 6px;
+	}
+	.bagoo-arrow {
+    	top: 3vw;
+	}
+}
+
+/*extra-small screens*/
 @media(max-width:768px) {
     #sidebar-wrapper {
         display: none;
@@ -77,6 +132,8 @@ ul {
         font-size: 9vw;
     }
 }
+
+/*smaller extra-small screens*/
 @media(max-width:496px) {
     .bagoo-slide-btn {
         padding-left: 8px;
