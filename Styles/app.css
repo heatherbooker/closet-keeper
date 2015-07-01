@@ -52,9 +52,15 @@ a:hover {
 }
 
 .bagoo-arrow-col {
-	display: flex;
-    align-items: center;
-    -webkit-align-items: center;
+      display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center; 
+  align-items: center; 
+    background: #FF6FCF
 }
 
 .bagoo-eq-height {
