@@ -146,7 +146,7 @@ a:hover {
 }
 /*extra-small screens*/
 
-@media(max-width:768px) {
+@media(max-width:767px) {
     #sidebar-wrapper {
         display: none;
     }
@@ -158,13 +158,16 @@ a:hover {
     }
     .bagoo-btm-btn {
         font-size: 3vw;
-        /*padding-left: 3px;*/
-        /*padding-right: 3px;*/
     }
-    .bagoo-no-pad {
-        /*padding-left: 3px;*/
-        /*padding-right: auto;*/
+    .img-responsive {
+    	min-width: 100%;
     }
+    .bagoo-arrow-contain {
+    	line-height: 96vw;
+	}
+	.bagoo-arrow-col {
+		padding-left: 10px;
+	}
 }
 /*smaller extra-small screens*/
 
