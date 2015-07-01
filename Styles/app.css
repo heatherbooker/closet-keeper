@@ -54,12 +54,14 @@ a:hover {
 .bagoo-arrow-col {
 	display: flex;
     align-items: center;
+    -webkit-align-items: center;
 }
 
 .bagoo-eq-height {
 	 display: -webkit-box;
      display: -moz-box;
      display: -ms-flexbox;
+     display: -moz-flex;
      display: -webkit-flex;
      display: flex;
 }
