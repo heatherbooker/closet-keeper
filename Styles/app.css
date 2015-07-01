@@ -49,7 +49,7 @@ a:hover {
 .bagoo-arrow {
     font-size: 4vw;
     position: relative;
-    top: 30px;
+    top: 31px;
 }
 
 .glyphicon-chevron-left {
@@ -107,11 +107,29 @@ a:hover {
 /*media queries*/
 /*small screens*/
 
+@media(max-width:1199px) and (min-width:1080px) {
+	.bagoo-arrow {
+		top: 23px;
+	}
+}
+
 @media(max-width:992px) {
     .bagoo-btm-btn {
         font-size: 1.2vw;
         padding: 6px;
     }
+    .bagoo-arrow {
+        top: 0px;
+    }
+    .glyphicon-chevron-left {
+    	margin-left: 0px;
+	}
+}
+
+@media(max-width:940px) and (min-width: 826px) {
+	.bagoo-arrow {
+		top: 12px;
+	}
 }
 
 @media(max-width:825px) {
@@ -123,7 +141,7 @@ a:hover {
     	padding: 6px;
     }
     .bagoo-arrow {
-        top: 3vw;
+    	top: 20px;
     }
 }
 /*extra-small screens*/
@@ -151,8 +169,12 @@ a:hover {
 /*smaller extra-small screens*/
 
 @media(max-width:496px) {
+	h1 {
+		font-size: 9.7vw;
+	}
     .bagoo-slide-btn {
         padding-left: 8px;
+        padding-right: 8px;
         margin-top: 4vw;
     }
     .bagoo-skinny-col {
@@ -162,6 +184,7 @@ a:hover {
     }
     .bagoo-title-col {
         width: 82.8%;
+        padding-left: 5px;
     }
     .bagoo-btm-btn {
         font-size: 4vw;
@@ -173,6 +196,13 @@ a:hover {
         padding-right: 3px;
     }
 }
+
+@media(max-width:349px) {
+	h1 {
+		font-size: 9.5vw;
+	}
+}
+
 /*end sidebar css*/
 
 div {
