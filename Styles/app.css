@@ -19,7 +19,6 @@ a {
 a:hover {
     color: #353535;
 }
-
 /*menu icon*/
 
 .glyphicon-menu-hamburger {
@@ -36,42 +35,38 @@ a:hover {
     padding-left: 7px;
     padding-right: 7px;
 }
-
 /*"recommended outfit"*/
 
 .bagoo-space {
     margin: 1vw;
 }
-
 /*arrows*/
 
 .bagoo-arrow {
     font-size: 4vw;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .bagoo-arrow-col {
-      display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center; 
-  align-items: center; 
-    background: #FF6FCF
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
 }
 
 .bagoo-eq-height {
-	 display: -webkit-box;
-     display: -moz-box;
-     display: -ms-flexbox;
-     display: -moz-flex;
-     display: -webkit-flex;
-     display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
 }
-
 /*stolen sidebar css*/
 
 .sidebar-nav li {
@@ -119,11 +114,10 @@ a:hover {
 /*small screens*/
 
 @media(min-width:1640px) {
-	h1 {
-		font-size: 60pt;
-	}
+    h1 {
+        font-size: 60pt;
+    }
 }
-
 /*extra-small screens*/
 
 @media(max-width:767px) {
@@ -140,9 +134,9 @@ a:hover {
 /*smaller extra-small screens*/
 
 @media(max-width:496px) {
-	h1 {
-		font-size: 9.7vw;
-	}
+    h1 {
+        font-size: 9.7vw;
+    }
     .bagoo-slide-btn {
         padding-left: 8px;
         padding-right: 8px;
@@ -160,11 +154,10 @@ a:hover {
 }
 
 @media(max-width:349px) {
-	h1 {
-		font-size: 9.5vw;
-	}
+    h1 {
+        font-size: 9.5vw;
+    }
 }
-
 /*end sidebar css*/
 
 div {
