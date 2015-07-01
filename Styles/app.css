@@ -41,6 +41,10 @@ a:hover {
     list-style: none;
 }
 
+.img-responsive {
+	min-height: 100%;
+}
+
 #bagoo-img-stack {
     padding-left: 0px;
 }
@@ -48,18 +52,22 @@ a:hover {
 
 .bagoo-arrow {
     font-size: 4vw;
-    position: relative;
-    top: 31px;
 }
 
 .glyphicon-chevron-left {
     margin-left: 8px;
 }
 
-.bagoo-arrow-contain {
-    line-height: 34vw;
+.bagoo-arrow-R-col,
+.bagoo-arrow-L-col {
+	float: none;
+	display: table-cell;
+	vertical-align: middle;
 }
 
+.bagoo-table-row {
+	display: table;
+}
 
 /*stolen sidebar css*/
 
@@ -111,21 +119,6 @@ a:hover {
 	h1 {
 		font-size: 60pt;
 	}
-	.bagoo-arrow-contain {
-		line-height: 25vw;
-	}
-}
-
-@media(max-width:1639px) and (min-width:1420px) {
-	.bagoo-arrow-contain {
-		line-height: 30vw;
-	}
-}
-
-@media(max-width:1199px) and (min-width:1080px) {
-	.bagoo-arrow {
-		top: 23px;
-	}
 }
 
 @media(max-width:992px) {
@@ -133,17 +126,8 @@ a:hover {
         font-size: 1.2vw;
         padding: 6px;
     }
-    .bagoo-arrow {
-        top: 0px;
-    }
     .glyphicon-chevron-left {
     	margin-left: 0px;
-	}
-}
-
-@media(max-width:940px) and (min-width: 826px) {
-	.bagoo-arrow {
-		top: 12px;
 	}
 }
 
@@ -154,9 +138,6 @@ a:hover {
     }
     .bagoo-no-pad {
     	padding: 6px;
-    }
-    .bagoo-arrow {
-    	top: 20px;
     }
 }
 /*extra-small screens*/
@@ -177,10 +158,7 @@ a:hover {
     .img-responsive {
     	min-width: 100%;
     }
-    .bagoo-arrow-contain {
-    	line-height: 96vw;
-	}
-	.bagoo-arrow-col {
+	.bagoo-arrow-R-col {
 		padding-left: 10px;
 	}
 }
@@ -216,7 +194,7 @@ a:hover {
 }
 
 @media(max-width:400px) {
-	.bagoo-arrow-col {
+	.bagoo-arrow-R-col {
 		padding-left: 3px;
 	}
 }
@@ -225,7 +203,7 @@ a:hover {
 	h1 {
 		font-size: 9.5vw;
 	}
-	.bagoo-arrow-col {
+	.bagoo-arrow-R-col {
 		padding-left: 7px;
 	}
 }
