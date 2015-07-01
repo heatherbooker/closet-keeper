@@ -19,6 +19,7 @@ a {
 a:hover {
     color: #353535;
 }
+
 /*menu icon*/
 
 .glyphicon-menu-hamburger {
@@ -35,38 +36,32 @@ a:hover {
     padding-left: 7px;
     padding-right: 7px;
 }
+
 /*"recommended outfit"*/
 
-.bagoo-img-stack {
-    list-style: none;
+.bagoo-space {
+    margin: 1vw;
 }
 
-.img-responsive {
-	/*min-width: 100%;*/
-}
-
-#bagoo-img-stack {
-    padding-left: 0px;
-}
 /*arrows*/
 
 .bagoo-arrow {
     font-size: 4vw;
+    margin-left:auto;
+    margin-right:auto;
 }
 
-.glyphicon-chevron-left {
-    margin-left: 8px;
+.bagoo-arrow-col,
+.bagoo-arrow-col {
+	display: flex;
+    align-items: center;
 }
 
-.bagoo-arrow-R-col,
-.bagoo-arrow-L-col {
-	float: none;
-	display: table-cell;
-	vertical-align: middle;
-}
-
-.bagoo-table-row {
-	display: table;
+.bagoo-eq-height {
+	 display: -webkit-box;
+     display: -webkit-flex;
+     display: -ms-flexbox;
+     display: flex;
 }
 
 /*stolen sidebar css*/
@@ -121,25 +116,6 @@ a:hover {
 	}
 }
 
-@media(max-width:992px) {
-    .bagoo-btm-btn {
-        font-size: 1.2vw;
-        padding: 6px;
-    }
-    .glyphicon-chevron-left {
-    	margin-left: 0px;
-	}
-}
-
-@media(max-width:825px) {
-    .bagoo-btm-btn {
-        font-size: 1.5vw;
-        /*padding: 6px;*/
-    }
-    .bagoo-no-pad {
-    	padding: 6px;
-    }
-}
 /*extra-small screens*/
 
 @media(max-width:767px) {
@@ -152,15 +128,6 @@ a:hover {
     h1 {
         font-size: 9vw;
     }
-    .bagoo-btm-btn {
-        font-size: 3vw;
-    }
-    .img-responsive {
-    	min-width: 100%;
-    }
-	.bagoo-arrow-R-col {
-		padding-left: 10px;
-	}
 }
 /*smaller extra-small screens*/
 
@@ -182,29 +149,11 @@ a:hover {
         width: 82.8%;
         padding-left: 5px;
     }
-    .bagoo-btm-btn {
-        font-size: 4vw;
-        padding-left: 3px;
-        padding-right: 3px;
-    }
-    .bagoo-no-pad {
-        padding-left: 3px;
-        padding-right: 3px;
-    }
-}
-
-@media(max-width:400px) {
-	.bagoo-arrow-R-col {
-		padding-left: 3px;
-	}
 }
 
 @media(max-width:349px) {
 	h1 {
 		font-size: 9.5vw;
-	}
-	.bagoo-arrow-R-col {
-		padding-left: 7px;
 	}
 }
 
