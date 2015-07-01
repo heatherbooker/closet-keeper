@@ -51,7 +51,6 @@ a:hover {
     margin-right:auto;
 }
 
-.bagoo-arrow-col,
 .bagoo-arrow-col {
 	display: flex;
     align-items: center;
@@ -160,5 +159,5 @@ a:hover {
 /*end sidebar css*/
 
 div {
-    /*border: solid 1px grey;*/
+    border: solid 1px grey;
 }
