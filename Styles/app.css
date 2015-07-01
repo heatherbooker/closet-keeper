@@ -42,7 +42,7 @@ a:hover {
 }
 
 .img-responsive {
-	min-height: 100%;
+	/*min-width: 100%;*/
 }
 
 #bagoo-img-stack {
