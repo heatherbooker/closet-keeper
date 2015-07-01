@@ -200,9 +200,18 @@ a:hover {
     }
 }
 
+@media(max-width:400px) {
+	.bagoo-arrow-col {
+		padding-left: 3px;
+	}
+}
+
 @media(max-width:349px) {
 	h1 {
 		font-size: 9.5vw;
+	}
+	.bagoo-arrow-col {
+		padding-left: 7px;
 	}
 }
 
