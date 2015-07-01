@@ -107,6 +107,21 @@ a:hover {
 /*media queries*/
 /*small screens*/
 
+@media(min-width:1640px) {
+	h1 {
+		font-size: 60pt;
+	}
+	.bagoo-arrow-contain {
+		line-height: 25vw;
+	}
+}
+
+@media(max-width:1639px) and (min-width:1420px) {
+	.bagoo-arrow-contain {
+		line-height: 30vw;
+	}
+}
+
 @media(max-width:1199px) and (min-width:1080px) {
 	.bagoo-arrow {
 		top: 23px;
