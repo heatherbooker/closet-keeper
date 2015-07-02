@@ -8,10 +8,6 @@ h1 {
     margin-top: 14px;
 }
 
-ul {
-    margin-top: 10px;
-}
-
 a {
     color: #A5A5A5;
 }
@@ -19,6 +15,11 @@ a {
 a:hover {
     color: #353535;
 }
+
+.bagoo-space {
+    margin: 1vw;
+}
+
 /*menu icon*/
 
 .glyphicon-menu-hamburger {
@@ -35,38 +36,7 @@ a:hover {
     padding-left: 7px;
     padding-right: 7px;
 }
-/*"recommended outfit"*/
 
-.bagoo-space {
-    margin: 1vw;
-}
-/*arrows*/
-
-.bagoo-arrow {
-    font-size: 4vw;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.bagoo-arrow-col {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
-}
-
-.bagoo-eq-height {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: flex;
-}
 /*stolen sidebar css*/
 
 .sidebar-nav li {
@@ -160,6 +130,3 @@ a:hover {
 }
 /*end sidebar css*/
 
-div {
-    /*border: solid 1px grey;*/
-}
