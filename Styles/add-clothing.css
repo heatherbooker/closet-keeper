@@ -3,7 +3,8 @@ div {
 }
 
 .bagoo-form {
-    background-color: #CFCFCF;
+    /*background-color: #CFCFCF;*/
+    background-color: pink;
     padding: 10px;
     border-radius: 4px;
     margin: 5px;
