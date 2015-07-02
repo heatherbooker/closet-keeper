@@ -107,6 +107,11 @@ a:hover {
     color: #9A9A9A;
     background: none;
 }
+
+.bagoo-sm-menu {
+    text-indent: 1vw;
+    font-size: 14px;
+}
 /*media queries*/
 /*small screens*/
 
