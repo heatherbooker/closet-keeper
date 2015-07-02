@@ -27,4 +27,5 @@ div {
 
 .bagoo-eq-height-row {
 	height: 100%;
+	min-height: 100%;
 }
