@@ -1,9 +1,9 @@
 div {
-	/*border: solid 1px grey;*/
+    /*border: solid 1px grey;*/
 }
 
 .bagoo-brick {
-	margin-left: auto;
+    margin-left: auto;
     margin-right: auto;
 }
 
@@ -12,16 +12,16 @@ div {
 }
 
 .bagoo-search {
-	margin-top: 6px;
+    margin-top: 6px;
 }
 
 img {
-	margin-top: 6px;
-	margin-bottom: 6px;
+    margin-top: 6px;
+    margin-bottom: 6px;
 }
 
 .bagoo-centering-col {
-	display: -webkit-box;
+    display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -moz-flex;
@@ -54,5 +54,9 @@ img {
     .bagoo-shrink-sides {
         padding-left: 6px;
         padding-right: 6px;
+    }
+    .bagoo-super-shrink-sides {
+        padding-left: 3px;
+        padding-right: 3px;
     }
 }
