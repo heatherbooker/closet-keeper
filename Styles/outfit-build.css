@@ -1,0 +1,41 @@
+div {
+	/*border: solid 1px grey;*/
+}
+
+.bagoo-brick {
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.bagoo-box {
+    border: solid 1px grey;
+}
+
+.bagoo-search {
+	margin-top: 6px;
+}
+
+img {
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+
+.bagoo-centering-col {
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.bagoo-eq-height {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+}
