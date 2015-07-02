@@ -51,4 +51,8 @@ img {
     .bagoo-search-icon {
         display: block;
     }
+    .bagoo-shrink-sides {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
 }
