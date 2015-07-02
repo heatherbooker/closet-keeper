@@ -45,7 +45,7 @@ img {
 }
 
 .bagoo-scroll {
-    max-height: 62vw;
+    max-height: 50vh;
     overflow: auto;
 }
 
@@ -63,5 +63,8 @@ img {
     .bagoo-super-shrink-sides {
         padding-left: 3px;
         padding-right: 3px;
+    }
+    .bagoo-scroll {
+        max-height: 70vw;
     }
 }
