@@ -1,0 +1,22 @@
+div {
+    /*border: solid 1px grey;*/
+}
+
+.bagoo-form {
+    background-color: #CFCFCF;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 5px;
+}
+
+#inputEvent,
+#inputType,
+#inputColour {
+    height: 1.8em;
+    font-size: 16pt;
+}
+
+.bagoo-big-btn {
+	height: 5vw;
+	color: black;
+}
