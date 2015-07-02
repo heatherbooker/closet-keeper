@@ -1,5 +1,5 @@
 div {
-	border: solid 1px grey;
+	/*border: solid 1px grey;*/
 }
 
 .bagoo-brick {
@@ -38,4 +38,17 @@ img {
     display: -moz-flex;
     display: -webkit-flex;
     display: flex;
+}
+
+.bagoo-search-icon {
+    display: none;
+}
+
+@media(max-width: 768px) {
+    .bagoo-search {
+        display: none;
+    }
+    .bagoo-search-icon {
+        display: block;
+    }
 }
