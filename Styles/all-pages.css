@@ -39,11 +39,10 @@ a:hover {
 
 /*equal height columns*/
 
-.bagoo-arrow {
-    font-size: 4vw;
+/* +item to be centered:
     margin-left: auto;
     margin-right: auto;
-}
+    */
 
 .bagoo-eq-height-col {
     display: -webkit-box;
@@ -158,3 +157,10 @@ a:hover {
 }
 /*end sidebar css*/
 
+/*home page specific css*/
+.bagoo-arrow {
+    font-size: 4vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*end homepg*/
