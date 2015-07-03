@@ -48,11 +48,10 @@ a:hover {
     margin-left: auto;
     margin-right: auto;
     height: 100%;
-    display: table-cell;
 }
-
-.bagoo-eq-height-col {
-    display: table;
+.bagoo-big-btnX {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*/////////////////////////////////*/
