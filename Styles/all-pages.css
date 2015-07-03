@@ -43,7 +43,13 @@ a:hover {
     margin-left: auto;
     margin-right: auto;
     */
-
+/*/////////////////////////////////*/
+.bagoo-big-btn {
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+/*/////////////////////////////////*/
 .bagoo-eq-height-col {
     display: -webkit-box;
     display: -moz-box;
@@ -169,3 +175,7 @@ a:hover {
     margin-right: auto;
 }
 /*end homepg*/
+
+div {
+    border: 1px solid black;
+}
