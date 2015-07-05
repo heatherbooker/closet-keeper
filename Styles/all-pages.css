@@ -8,6 +8,10 @@ h1 {
     margin-top: 14px;
 }
 
+.bagoo-top-bar {
+    /*position: fixed;*/
+}
+
 a {
     color: #A5A5A5;
 }
@@ -173,5 +177,5 @@ a:hover {
 /*end homepg*/
 
 div {
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
