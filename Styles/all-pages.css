@@ -13,7 +13,7 @@ body {
 }
 
 .navbar {
-    background-color: #A94D4F;
+    background-color: #8D4042;
 }
 
 a {
@@ -39,9 +39,8 @@ a:hover {
 </div>*/
 
 .bagoo-space {
-    margin: 1vw;
+    margin: 1.3vw;
 }
-
 /*menu icon*/
 
 .glyphicon-menu-hamburger {
@@ -58,21 +57,20 @@ a:hover {
     padding-left: 7px;
     padding-right: 7px;
 }
-
 /*equal height columns*/
-
 /* +item to be centered:
     margin-left: auto;
     margin-right: auto;
     */
 /*/////////////////////////////////*/
+
 .bagoo-big-btn {
     margin-left: auto;
     margin-right: auto;
     height: 100%;
 }
-
 /*/////////////////////////////////*/
+
 .bagoo-eq-height-col {
     -webkit-align-items: center;
     align-items: center;
@@ -87,7 +85,6 @@ a:hover {
     display: -webkit-flex;
     display: flex;
 }
-
 /*stolen sidebar css*/
 
 .sidebar-nav li {
@@ -156,6 +153,19 @@ a:hover {
     h1 {
         font-size: 9vw;
     }
+    .bagoo-space {
+        margin: 4vh;
+    }
+    .bagoo-skinny-col {
+        padding-left: auto;
+        padding-right: auto;
+        margin-left: 15px;
+        width: 20%;
+    }
+    .bagoo-title-col {
+        width: 76%;
+        padding-left: 5px;
+    }
 }
 /*smaller extra-small screens*/
 
@@ -171,11 +181,12 @@ a:hover {
     .bagoo-skinny-col {
         padding-left: auto;
         padding-right: auto;
-        width: 17.2%;
+        margin-left: 15px;
+        width: 19%;
     }
     .bagoo-title-col {
-        width: 82.8%;
-        padding-left: 5px;
+        width: 76%;
+        padding-left: 0px;
     }
 }
 
@@ -185,8 +196,8 @@ a:hover {
     }
 }
 /*end sidebar css*/
-
 /*home page specific css*/
+
 .bagoo-arrow {
     font-size: 4vw;
     margin-left: auto;
