@@ -56,14 +56,14 @@ img {
     .bagoo-search-icon {
         display: block;
     }
-    .bagoo-shrink-sides {
+/*    .bagoo-shrink-sides {
         padding-left: 6px;
         padding-right: 6px;
     }
     .bagoo-super-shrink-sides {
         padding-left: 3px;
         padding-right: 3px;
-    }
+    }*/
     .bagoo-scroll {
         max-height: 70vw;
     }

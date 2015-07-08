@@ -5,44 +5,45 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Bagoo Closet | Outfit Builder</title>
+    <title>Bagoo Closet | Build Outfit</title>
 
+    <!-- reset browser -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/normalize.min.css">
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <!-- Loading Flat UI -->
+    <!-- Loading Flat UI -->
     <link href="../lib/flatUI/dist/css/flat-ui.min.css" rel="stylesheet">
     <!-- google font -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+    <!-- my styles -->
     <link rel="stylesheet" href="../Styles/all-pages.css">
-    <link rel="stylesheet" href="../Styles/outfit-build.css">
+    <link rel="stylesheet" href="../Styles/browse.css">
 
 
 </head>
 
-
 <body>
 
     <div class="container">
-
-                <!-- top bar with title and menu icon -->
+        <!-- top bar with title and menu icon and search bar-->
 
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 
-        <div class="row">
+            <div class="row">
 
-            <!-- menu icon -->
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 bagoo-skinny-col">
-                <a href="#menu-toggle" class="btn btn-default bagoo-slide-btn" id="menu-toggle">
-                    <span class="glyphicon glyphicon-menu-hamburger"></span>
-                </a>
+                <!-- menu icon -->
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 bagoo-skinny-col">
+                    <a href="#menu-toggle" class="btn btn-default bagoo-slide-btn" id="menu-toggle">
+                        <span class="glyphicon glyphicon-menu-hamburger"></span>
+                    </a>
+                </div>
+
+                <!-- title -->
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-10 bagoo-title-col">
+                    <h1>BAGOO CLOSET</h1>
+                </div>
+
             </div>
-
-            <!-- title -->
-            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-10 bagoo-title-col">
-                <h1>BAGOO CLOSET</h1>
-            </div>
-
-        </div>
 
         </nav>
 
@@ -50,12 +51,13 @@
         </div>
 
 
+
         <!-- content and sidebar -->
-        <div class="row bagoo-eq-height" id="wrapper">
+        <div class="row" id="wrapper">
 
 
             <!-- sidebar menu -->
-            <div class="col-lg-2 col-md-2 col-sm-2">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-0">
                 <div id="sidebar-wrapper">
                     <ul class="sidebar-nav">
                         <li class="sidebar-brand">
@@ -77,158 +79,115 @@
                 </div>
             </div>
 
+
             <!-- content -->
+            <div class="col-lg-10 col-sm-10 col-xs-12">
 
-            <div class="col-md-1 col-xs-10">
-            </div>
+                <div class="row">
 
-
-            <!-- outfit -->
-            <div class="col-md-3 col-sm-6 col-xs-10">
-                <div class="row">
-                    <center><img class="img-responsive bagoo-outfit" src="https://placeholdit.imgix.net/~text?txtsize=60&txt=%5Bimg&w=330&h=200"></center>
-                </div>
-                <div class="row">
-                    <center><img class="img-responsive bagoo-outfit" src="https://placeholdit.imgix.net/~text?txtsize=60&txt=%5Bimg&w=330&h=200"></center>
-                </div>
-                <div class="bagoo-space">
-                </div>
-                <div class="row">
-                    <div class="col-md-2 col-sm-1">
+                    <div class="col-xs-1">
                     </div>
-                    <div class="col-md-8 col-sm-11 col-xs-12">
-                        <a href="#" class="btn btn-default btn-block">Random Outfit</a>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-md-1 col-xs-1">
-            </div>
-
-
-            <!-- search box and other clothing options -->
-            <div class="col-lg-5 col-sm-6 col-xs-8 bagoo-centering-col">
-                <div class="row bagoo-brick">
-                    <div class="col-lg-12 col-xs-12 bagoo-shrink-sides">
-                        <div class="row bagoo-box">
-
-                            <div class="col-lg-1">
+                    <!-- outfit -->
+                    <div class="col-md-4 col-xs-10">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <center><img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=60&txt=%5Bimg%5D&w=330&h=200"></center>
                             </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <center><img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=60&txt=%5Bimg%5D&w=330&h=200"></center>
+                            </div>
+                        </div>
 
-                            <div class="col-lg-10 col-xs-9 bagoo-shrink-sides">
+                        <div class="bagoo-space">
+                        </div>
 
-                                <!-- search bar -->
-                                <div class="row">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <a href="#" class="btn btn-default btn-block">Random Outfit</a>
+                            </div>
+                        </div>
+
+                        <!-- end outfit column -->
+                    </div>
+
+                    <div class="col-xs-1">&nbsp;
+                    </div>
+
+
+                    <!-- box with search bar and alternate clothing options -->
+                    <div class="col-md-4 col-xs-10 col-xs-offset-1">
+
+                        <div class="row" style="border: solid black 1px; margin-top: 10px; margin-bottom:10px">
+                            <div class="col-xs-12">
+                                <div class="row" style=" margin-top: 8px; margin-bottom: 4px">
                                     <div class="col-xs-12">
-                                        <div class="input-group bagoo-search">
-                                            <input type="text" class="form-control" placeholder="...">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search for...">
                                             <span class="input-group-btn">
                                 <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
-                            </span>
-                                        </div>
-                                        <div class="bagoo-search-icon btn btn-default btn-block">
-                                        <span class="glyphicon glyphicon-search"></span>
+                                            </span>
                                         </div>
                                     </div>
-                                <!-- end search bar -->
                                 </div>
-
-
-                                <!-- images of alternate clothing options -->
-                                <div class="row bagoo-scroll">
-                                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-2">
+                                <div class="row">
+                                    <div class="col-md-4 col-xs-4">
                                         <center><img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=20&txt=%5Bimg%5D&w=100&h=100"></center>
                                     </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-2">
-                                        <center><img  class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=20&txt=%5Bimg%5D&w=100&h=100"></center>
+                                    <div class="col-md-4 col-xs-4">
+                                        <center><img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=20&txt=%5Bimg%5D&w=100&h=100"></center>
                                     </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-2">
-                                        <center><img  class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=20&txt=%5Bimg%5D&w=100&h=100"></center>
+                                    <div class="col-md-4 col-xs-4">
+                                        <center><img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=20&txt=%5Bimg%5D&w=100&h=100"></center>
                                     </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-2">
-                                        <center><img  class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=20&txt=%5Bimg%5D&w=100&h=100"></center>
+                                    <div class="col-md-4 col-xs-4">
+                                        <center><img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=20&txt=%5Bimg%5D&w=100&h=100"></center>
                                     </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <center><img  class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=20&txt=%5Bimg%5D&w=100&h=100"></center>
+                                    <div class="col-md-4 col-xs-4">
+                                        <center><img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=20&txt=%5Bimg%5D&w=100&h=100"></center>
                                     </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <center><img  class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=20&txt=%5Bimg%5D&w=100&h=100"></center>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <center><img  class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=20&txt=%5Bimg%5D&w=100&h=100"></center>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <center><img  class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=20&txt=%5Bimg%5D&w=100&h=100"></center>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <center><img  class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=20&txt=%5Bimg%5D&w=100&h=100"></center>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <center><img  class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=20&txt=%5Bimg%5D&w=100&h=100"></center>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <center><img  class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=20&txt=%5Bimg%5D&w=100&h=100"></center>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <center><img  class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=20&txt=%5Bimg%5D&w=100&h=100"></center>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <center><img  class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=20&txt=%5Bimg%5D&w=100&h=100"></center>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <center><img  class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=20&txt=%5Bimg%5D&w=100&h=100"></center>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <center><img  class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=20&txt=%5Bimg%5D&w=100&h=100"></center>
-                                    </div>
-                                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-                                    <center><a href="#" class="">Load More</a></center>
-                                    </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
-                                    <center><a href="#" class="">See All Clothing</a></center>
+                                    <div class="col-md-4 col-xs-4">
+                                        <center><img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=20&txt=%5Bimg%5D&w=100&h=100"></center>
                                     </div>
                                 </div>
-
+                                <div class="row">
+                                    <div class="col-xs-5">
+                                        <center><a href="#">Load More</a></center>
+                                    </div>
+                                    <div class="col-xs-7">
+                                        <center><a href="#">See All Clothing</a></center>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="col-lg-1">
-                            </div>
-
-                            <!-- end bagoo-box -->
+                            <!-- end row which is bordered box -->
                         </div>
 
-                        <div class="bagoo-space">
-                        </div>
-                        <div class="bagoo-space">
-                        </div>
-
-                        <!-- buttons -->
                         <div class="row">
-                            <div class="col-lg-2 col-md-1 col-sm-1 hidden-xs">
+                            <div class="col-xs-6">
+                                <a href="#" class="btn btn-default btn-block">SAVE</a>
                             </div>
-                            <div class="col-lg-4 col-md-5 col-sm-5 col-xs-6 bagoo-super-shrink-sides">
-                                <a href="#" class="btn btn-default btn-block bagoo-super-shrink-sides">SAVE</a>
-                            </div>
-                            <div class="col-lg-4 col-md-5 col-sm-5 col-xs-6 bagoo-super-shrink-sides">
-                                <a href="#" class="btn btn-default btn-block bagoo-super-shrink-sides">Delete</a>
+                            <div class="col-xs-6">
+                                <a href="#" class="btn btn-default btn-block">Delete</a>
                             </div>
                         </div>
 
+                        <!-- end bordered box and buttons -->
                     </div>
 
-                    <!-- end bagoo-brick -->
+                    <!-- end content row -->
                 </div>
 
-                <!-- end content div -->
+                <!-- end content column -->
             </div>
 
-            <!-- end content and sidebar div -->
+            <!-- end sidebar and content -->
         </div>
 
-        <!-- end container div -->
+        <!-- end container -->
     </div>
-
-
 
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -236,10 +195,10 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-        <!-- Flat UI -->
-        <script src="../lib/flatUI/dist/js/vendor/video.js"></script>
-        <script src="../lib/flatUI/dist/js/flat-ui.min.js"></script>
-        
+    <!-- Flat UI -->
+    <script src="../lib/flatUI/dist/js/vendor/video.js"></script>
+    <script src="../lib/flatUI/dist/js/flat-ui.min.js"></script>
+
     <!-- Menu Toggle Script -->
     <script src="../Scripts/Controller.js"></script>
 
