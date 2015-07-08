@@ -8,8 +8,12 @@ h1 {
     margin-top: 14px;
 }
 
-.bagoo-top-bar {
-    /*position: fixed;*/
+body {
+    background-color: #FFE3C9;
+}
+
+.navbar {
+    background-color: #A94D4F;
 }
 
 a {
@@ -19,6 +23,20 @@ a {
 a:hover {
     color: #353535;
 }
+
+.btn {
+    background-color: #2A5A76;
+}
+/*<div class="bg" style="background:#670D0F">
+</div>
+<div  class="bg" style="background:#F01945">
+</div>
+<div  class="bg" style="background:#F36444">
+</div>
+<div  class="bg" style="background:#FFCE6F">
+</div>
+<div  class="bg" style="background:#FFE3C9">
+</div>*/
 
 .bagoo-space {
     margin: 1vw;

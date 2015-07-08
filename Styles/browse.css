@@ -2,20 +2,8 @@ div {
     /*border: solid 1px grey;*/
 }
 
-.bagoo-top-bar {
-	background-color: pink;
-	opacity: 100%;
-    position: fixed;
-    display: block;
-    width: 100%;
-    top: 0px;
-    z-index: 100;
-    left: 0px;
-    height: 120px;
-}
-
 .bagoo-search-bar {
-	padding-bottom: 10px;
+    padding-bottom: 10px;
 }
 
 img {
@@ -23,6 +11,14 @@ img {
     margin-bottom: 5px;
 }
 
-body {
-    padding-top: 150px;
-}
+
+/*<div class="bg" style="background:#670D0F">
+</div>
+<div  class="bg" style="background:#F01945">
+</div>
+<div  class="bg" style="background:#F36444">
+</div>
+<div  class="bg" style="background:#FFCE6F">
+</div>
+<div  class="bg" style="background:#FFE3C9">
+</div>*/
