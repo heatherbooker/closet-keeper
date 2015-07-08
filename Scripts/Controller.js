@@ -20,13 +20,6 @@ $(window).resize(function() {
 })
 
 
-$(document).ready(function() {
-    $("select").selectpicker({
-        style: 'btn-primary',
-        menuStyle: 'dropdown-inverse'
-    });
-});
-
 $("select").select2({
     ".mbl": 'dropdown-inverse'
 });
