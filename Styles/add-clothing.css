@@ -8,11 +8,24 @@ div {
     border-radius: 4px;
     margin: 5px;
 }
-
-#inputEvent,
+/*#inputEvent,
 #inputType,
 #inputColour {
     height: 1.8em;
     font-size: 16pt;
 }
+*/
 
+#inputName {
+    background-color: #CFCFCF;
+    border-color: #CFCFCF;
+    border-radius: 0px;
+}
+
+#inputName:hover {
+    border-bottom-color: #6A6A6A;
+}
+
+#wrapper {
+    font-family: 'Roboto', sans-serif;
+}

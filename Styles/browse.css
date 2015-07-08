@@ -1,9 +1,28 @@
-
 div {
     /*border: solid 1px grey;*/
 }
 
+.bagoo-top-bar {
+	background-color: pink;
+	opacity: 100%;
+    position: fixed;
+    display: block;
+    width: 100%;
+    top: 0px;
+    z-index: 100;
+    left: 0px;
+    height: 120px;
+}
+
+.bagoo-search-bar {
+	padding-bottom: 10px;
+}
+
 img {
-	margin-top: 5px;
-	margin-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+body {
+    padding-top: 150px;
 }
