@@ -14,12 +14,14 @@ body {
 }
 
 .navbar {
-    background-color: #4C4C4C;
+    background-color: #6A6A6A;
 }
 
 #sidebar-wrapper {
-    /*background-color: #34495e;
-    border-radius: 4px;*/
+    background-color: #6A6A6A;
+    border-radius: 4px;
+    padding: 20px;
+    padding-right: 0px;
 }
 
 a {
