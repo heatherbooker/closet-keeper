@@ -7,7 +7,7 @@ $("#menu-toggle").click(function() {
 
 function resizeNav() {
     if ($(".navbar").height() > $('#godown').height()) {
-        $('#godown').height($(".navbar").height() + 10)
+        $('#godown').height($(".navbar").height() + 20)
     };
 }
 

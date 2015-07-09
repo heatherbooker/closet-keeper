@@ -6,7 +6,7 @@ div {
     background-color: #CFCFCF;
     padding: 10px;
     border-radius: 4px;
-    margin: 5px;
+    margin: 20px;
 }
 /*#inputEvent,
 #inputType,
@@ -33,4 +33,9 @@ div {
 
 #wrapper {
     font-family: 'Roboto', sans-serif;
+}
+
+img {
+    margin-top:15px;
+    margin-bottom: 15px;
 }
