@@ -10,22 +10,15 @@ h1 {
 }
 
 body {
-    background-color: #CCCCCC;
+    background-color: #F560A3;
 }
 
 .navbar {
-    background-color: #6A6A6A;
-}
-
-#sidebar-wrapper {
-    background-color: #6A6A6A;
-    border-radius: 4px;
-    padding: 20px;
-    padding-right: 0px;
+    background-color: #410272;
 }
 
 a {
-    color: #A5A5A5;
+    color: black;
 }
 
 a:hover {
@@ -33,8 +26,10 @@ a:hover {
 }
 
 .btn {
-    background-color: #2A5A76;
+    background-color: #D256FB;
+    color: black;
 }
+
 /*<div class="bg" style="background:#670D0F">
 </div>
 <div  class="bg" style="background:#F01945">
@@ -208,9 +203,10 @@ a:hover {
 /*home page specific css*/
 
 .bagoo-arrow {
-    font-size: 4vw;
+    font-size: 3vw;
     margin-left: auto;
     margin-right: auto;
+    color: black;
 }
 /*end homepg*/
 
