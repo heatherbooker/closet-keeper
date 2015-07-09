@@ -106,7 +106,8 @@ a:hover {
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #020202;
+    /*color: #020202;*/
+    color: white;
 }
 
 .sidebar-nav li a:hover {
