@@ -1,8 +1,8 @@
-function make16Clothing() {
+function makeClothing(end) {
 
     var clothes = [];
 
-    for (var i = 0; i < 16; i++) {
+    for (var i = 0; i < end; i++) {
         var c = new Clothing('', '', '', '', '../assets/images/' + i + '.jpg');
         clothes.push(c);
         displayClothing(c, i)
@@ -22,5 +22,5 @@ function displayClothing(clothingItem, div) {
 
 
 $(document).ready(function() {
-    make16Clothing();
+    makeClothing(16);
 });
