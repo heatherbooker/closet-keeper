@@ -10,11 +10,11 @@ h1 {
 }
 
 body {
-    background-color: #1abc9c;
+    background-color: #CCCCCC;
 }
 
 .navbar {
-    background-color: #34495e;
+    background-color: #4C4C4C;
 }
 
 #sidebar-wrapper {
@@ -106,8 +106,8 @@ a:hover {
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    /*color: #020202;*/
-    color: white;
+    color: #020202;
+    /*color: white;*/
 }
 
 .sidebar-nav li a:hover {
