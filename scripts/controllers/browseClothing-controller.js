@@ -1,12 +1,26 @@
-function changePic(clothingItem, div) {
-    var writeToDiv = '<center><img class="img-responsive" src="' + clothingItem.image + '"></center>'
-    document.getElementById(div).innerHTML = writeToDiv;
+function make16Clothing() {
+
+    var clothes = [];
+
+    for (var i = 0; i < 16; i++) {
+        var c = new Clothing('', '', '', '', '../assets/images/' + i + '.jpg');
+        clothes.push(c);
+        displayClothing(c, i)
+    }
+
 }
 
-var shirt = new Clothing('myshirt', 'shirt', 'salsa', 'pink', '../assets/images/blueShirt.jpeg');
 
-changePic(shirt, 'div1')
+function displayClothing(clothingItem, div) {
 
-var pants = new Clothing(' ', 'pants', 'dinner out', 'yellow', '../assets/images/tanPants.PNG');
+    var imageHTML = '<center><img class="img-responsive" src="' + clothingItem.image + '"></center>';
+    var divName = "div" + div;
 
-changePic(pants, 'div2')
+    document.getElementById(divName).innerHTML = imageHTML;
+
+}
+
+
+$(document).ready(function() {
+    make16Clothing();
+});
