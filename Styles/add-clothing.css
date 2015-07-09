@@ -1,23 +1,8 @@
-div {
-    /*border: solid 1px grey;*/
-}
-
 .bagoo-form {
     background-color: #CFCFCF;
     padding: 10px;
     border-radius: 4px;
     margin: 20px;
-}
-/*#inputEvent,
-#inputType,
-#inputColour {
-    height: 1.8em;
-    font-size: 16pt;
-}
-*/
-
-.select-primary .select2-choice {
-   /* background-color: #B6B465;*/
 }
 
 #inputName {

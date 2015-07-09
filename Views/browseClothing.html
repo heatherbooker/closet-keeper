@@ -7,14 +7,17 @@
 
     <title>Bagoo Closet | Clothing</title>
 
+    <!-- reset browsers -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/normalize.min.css">
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <!-- Loading Flat UI -->
     <link href="../lib/flatUI/dist/css/flat-ui.min.css" rel="stylesheet">
     <!-- google font -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="../Styles/all-pages.css">
-    <link rel="stylesheet" href="../Styles/browse.css">
+    <!-- my styles -->
+    <link rel="stylesheet" href="../styles/all-pages.css">
+    <link rel="stylesheet" href="../styles/browse.css">
 
 
 </head>
@@ -100,11 +103,11 @@
                 <!-- outfit displays -->
                 <div class="row">
 
-                    <div class="col-md-3 col-sm-4 col-xs-6">
+                    <div class="col-md-3 col-sm-4 col-xs-6" id="div1">
                         <center><img class="img-responsive bagoo-outfit" src="https://placeholdit.imgix.net/~text?txtsize=60&txt=%5Bimg%5D&w=330&h=330"></center>
                     </div>
 
-                    <div class="col-md-3 col-sm-4 col-xs-6">
+                    <div class="col-md-3 col-sm-4 col-xs-6" id="div2">
                         <center><img class="img-responsive bagoo-outfit" src="https://placeholdit.imgix.net/~text?txtsize=60&txt=%5Bimg%5D&w=330&h=330"></center>
                     </div>
 
@@ -181,7 +184,11 @@
         <script src="../lib/flatUI/dist/js/flat-ui.min.js"></script>
 
     <!-- Menu Toggle Script -->
-    <script src="../Scripts/Controller.js"></script>
+    <script src="../scripts/Controller.js"></script>
+            <!-- Model -->
+        <script src="../scripts/models/clothing.js"></script>
+        <!-- Controller -->
+    <script src="../scripts/controllers/browseClothing-controller.js"></script>
 
 </body>
 

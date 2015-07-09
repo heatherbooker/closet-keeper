@@ -18,8 +18,3 @@ $(document).ready(function() {
 $(window).resize(function() {
     $(resizeNav());
 })
-
-
-$("select").select2({
-    ".mbl": 'dropdown-inverse'
-});
