@@ -10,11 +10,16 @@ h1 {
 }
 
 body {
-    background-color: #2ecc71;
+    background-color: #1abc9c;
 }
 
 .navbar {
     background-color: #34495e;
+}
+
+#sidebar-wrapper {
+    background-color: #34495e;
+    border-radius: 4px;
 }
 
 a {
