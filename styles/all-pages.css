@@ -10,11 +10,11 @@ h1 {
 }
 
 body {
-    background-color: #F560A3;
+    background-color: #607AA6;
 }
 
 .navbar {
-    background-color: #410272;
+    background-color: black;
 }
 
 a {
@@ -26,8 +26,8 @@ a:hover {
 }
 
 .btn {
-    background-color: #BB6DD5;
-    color: black;
+    background-color: #4D546B;
+    color: white;
 }
 
 /*<div class="bg" style="background:#670D0F">

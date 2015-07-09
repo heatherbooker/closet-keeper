@@ -8,19 +8,16 @@ function updateView(clothingArray) {
 
 }
 
+var clothes = [];
 
 function makeClothingArray(end) {
 
-    var clothes = [];
-
     for (var i = 0; i < end; i++) {
 
-        var c = new Clothing('', '', '', '', '../assets/images/' + i + '.jpg');
+        var c = new Clothing(['a', 'a'], 'b', 'c', 'd', '../assets/images/' + i + '.jpg');
         clothes.push(c);
 
     }
-
-    return clothes
 }
 
 
@@ -36,5 +33,7 @@ function displayClothing(clothingItem, div) {
 
 
 $(document).ready(function() {
-    updateView(makeClothingArray(16));
+    makeClothingArray(16);
+    updateView(clothes);
+    alert(jsonClothes[0].use);
 });
