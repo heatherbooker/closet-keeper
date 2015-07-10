@@ -41,7 +41,7 @@ $(document).ready(function() {
 
     $.ajax({
         type: "get",
-        dataType: "jsonp",
+        dataType: "json",
         url: "../scripts/models/clothes.json",
         beforeSend: function(request) {
             request.overrideMimeType("application/json")
