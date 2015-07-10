@@ -1,3 +1,7 @@
+var clothes = [];
+
+
+
 function updateView(clothingArray) {
 
     for (var i = 0; i < clothingArray.length; i++) {
@@ -8,7 +12,6 @@ function updateView(clothingArray) {
 
 }
 
-var clothes = [];
 
 function makeClothingArray(jsonArray) {
 
@@ -18,12 +21,13 @@ function makeClothingArray(jsonArray) {
         clothes.push(c);
 
     }
+
 }
 
 
-function displayClothing(clothingItem, div) {
+function displayClothing(clothingObject, div) {
 
-    var imageHTML = '<center><img class="img-responsive" src="' + clothingItem.image + '"></center>';
+    var imageHTML = '<center><img class="img-responsive" src="' + clothingObject.image + '"></center>';
 
     var divName = "div" + div;
 
@@ -31,30 +35,32 @@ function displayClothing(clothingItem, div) {
 
 }
 
-var clothingArray = [];
-
 
 $(document).ready(function() {
 
-    // makeClothingArray(16);
-    //  updateView(clothes);
 
     $.ajax({
+
         type: "get",
         dataType: "json",
         url: "../scripts/models/clothes.json",
+
         beforeSend: function(request) {
             request.overrideMimeType("application/json")
         },
+
         success: function(data) {
-            //clothingArray = makeClothingArray(data.jsonClothing);
-            //updateView(clothingArray);
-            console.log(data.jsonClothing);
-            console.log(JSON.stringify(data) + 'yay! you called json!');
+
+            var clothesArray = data.jsonClothing;
+            makeClothingArray(clothesArray);
+            updateView(clothes);
+            console.log('yay! you called json!');
         },
+
         error: function(err) {
             console.log("uh oh spaghettis " + err.responseText);
         }
+
     })
 
 });
