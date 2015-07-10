@@ -1,6 +1,6 @@
 var clothes = [];
 
-
+Parse.initialize("qmqVorzxIpQRkEbanvb8hczUA0PgxF3CVaDeUGJt", "bXUQxAnUNjdnkeV5GUyuwp5hY0yOL6bCFH3V98X1");
 
 function updateView(clothingArray) {
 
@@ -35,6 +35,45 @@ function displayClothing(clothingObject, div) {
 
 }
 
+function search(searchTerms) {
+
+}
+
+///
+
+
+function newClothingObjectToParse() {
+
+    //Extend the native Parse.Object class.
+    var clothes = Parse.Object.extend("clothes");
+
+    //Instantiate an object of the ListItem class
+    var articleOfClothing = new clothes();
+
+    //listItem is now the object that we want to save, so we assign the properties that we want on it.
+    articleOfClothing.set("color", "blue");
+    articleOfClothing.set("type", "dress");
+    articleOfClothing.set("image", "../assets/images/16.jpg");
+    articleOfClothing.set("use", "salsa");
+    articleOfClothing.set("keywords", "purdy");
+
+    //We call the save method, and pass in success and failure callback functions.
+    articleOfClothing.save(null, {
+        success: function(item) {
+            //Success Callback 
+        },
+        error: function(gameScore, error) {
+            //Failure Callback
+        }
+    });
+};
+
+
+
+
+
+
+
 
 $(document).ready(function() {
 
@@ -51,9 +90,10 @@ $(document).ready(function() {
 
         success: function(data) {
 
-            var clothesArray = data.jsonClothing;
+            var clothesArray = data.results;
             makeClothingArray(clothesArray);
             updateView(clothes);
+            newClothingObjectToParse();
             console.log('yay! you called json!');
         },
 
