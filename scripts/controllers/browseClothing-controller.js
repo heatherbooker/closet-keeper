@@ -48,50 +48,103 @@ function getFile() {
 
     if (fileUploadControl.files.length > 0) {
         var file = fileUploadControl.files[0];
-        var name = "photo.jpg";
+        var name = "1.jpg";
 
         var parseFile = new Parse.File(name, file);
 
-        newClothingObjectToParse(parseFile);
+        updateParseImage('LfCOZ5I5id', parseFile);
     }
 
 }
 
-function newClothingObjectToParse(imageForParse) {
+function retrieveParseObject(id) {
 
-
-
-    imageForParse.save().then(function() {
-        // The file has been saved to Parse.
-        console.log('yay pictur saved');
-    }, function(error) {
-        // The file either could not be read, or could not be saved to Parse.
-        console.log('whyyyyy');
-    });
-
-    //Extend the native Parse.Object class.
     var clothes = Parse.Object.extend("clothes");
+    var query = new Parse.Query(clothes);
 
-    //Instantiate an object of the ListItem class
-    var articleOfClothing = new clothes();
+    query.get('"' + id + '"', {
 
-    //listItem is now the object that we want to save, so we assign the properties that we want on it.
-    articleOfClothing.set("color", "blue");
-    articleOfClothing.set("type", "dress");
-    articleOfClothing.set("img", imageForParse);
-    articleOfClothing.set("use", "salsa");
-    articleOfClothing.set("keywords", "new");
-
-    //We call the save method, and pass in success and failure callback functions.
-    articleOfClothing.save(null, {
-        success: function(item) {
-            //Success Callback 
+        success: function(object) {
+            console.log('woot parse object successfully retrieved!');
+            object.set('img')
         },
-        error: function(gameScore, error) {
-            //Failure Callback
+
+        error: function(object, error) {
+            console.log('oh boogers parse object not retrieved: ' + error);
         }
+
     });
-};
+}
+
+function updateParseImage(objectId, image) {
+    retrieveParseObject(objectId);
+
+    success: function(item) {
+        //Once the object is returned, we update its property and save it.
+        item.set('img', imageForParse);
+        item.save();
+    },
+
+    error: function(object, error) {
+        alert("Error when updating item: " + error.code + " " + error.message);
+    }
+}
+
+// function newClothingObjectToParse(imageForParse) {
+
+//     var query = new Parse.Query(clothes);
+
+//     query.get('LfCOZ5I5id'), {
+
+//         success: function(item) {
+//             //Once the object is returned, we update its property and save it.
+//             item.set('img', imageForParse);
+//             item.save();
+//         },
+
+//         error: function(object, error) {
+//             alert("Error when updating item: " + error.code + " " + error.message);
+//         }
+
+//     };
+// }
+
+//     imageForParse.save().then(function() {
+//         // The file has been saved to Parse.
+//         console.log('yay pictur saved');
+//     }, function(error) {
+//         // The file either could not be read, or could not be saved to Parse.
+//         console.log('whyyyyy');
+//     });
+
+//     objectToUpdate = "LfCOZ5I5id";
+
+//     objectToUpdate.set("img", imageForParse);
+// }
+
+//     //Extend the native Parse.Object class.
+//     var clothes = Parse.Object.extend("clothes");
+
+//     //Instantiate an object of the ListItem class
+//     var articleOfClothing = new clothes();
+
+//     //listItem is now the object that we want to save, so we assign the properties that we want on it.
+//     articleOfClothing.set("color", "blue");
+//     articleOfClothing.set("type", "dress");
+//     articleOfClothing.set("img", imageForParse);
+//     articleOfClothing.set("use", "salsa");
+//     articleOfClothing.set("keywords", "new");
+
+//     //We call the save method, and pass in success and failure callback functions.
+//     articleOfClothing.save(null, {
+//         success: function(item) {
+//             //Success Callback 
+//         },
+//         error: function(gameScore, error) {
+//             //Failure Callback
+//         }
+//     });
+// };
 
 // var parseFile = new Parse.File("photoOfThing", ../../assets/images/16.jpg);
 
