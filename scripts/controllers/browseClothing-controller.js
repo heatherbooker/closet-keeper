@@ -33,7 +33,24 @@ function displayClothing(clothingItem, div) {
 
 
 $(document).ready(function() {
-    makeClothingArray(16);
-    updateView(clothes);
-    alert(jsonClothes[0].use);
+
+    // makeClothingArray(16);
+    //  updateView(clothes);
+
+    $.ajax({
+        type: "get",
+        dataType: "json",
+        mimeType: "application/JSON",
+        url: "../scripts/models/clothes.json",
+        beforeSend: function(request) {
+            request.overrideMimeType("application/json")
+        },
+        success: function(data) {
+            alert('yay!');
+        },
+        error: function(err) {
+            console.log("uh oh spaghettis " + JSON.stringify(err));
+        }
+    })
+
 });
