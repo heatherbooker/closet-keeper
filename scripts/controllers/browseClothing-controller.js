@@ -48,7 +48,7 @@ $(document).ready(function() {
             alert('yay!');
         },
         error: function(err) {
-            console.log("uh oh spaghettis " + JSON.stringify(err));
+            console.log("uh oh spaghettis " + err.responseText);
         }
     })
 
