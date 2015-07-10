@@ -39,13 +39,13 @@ $(document).ready(function() {
 
     $.ajax({
         type: "get",
-        dataType: "json",
+        dataType: "jsonp",
         url: "../scripts/models/clothes.json",
         beforeSend: function(request) {
             request.overrideMimeType("application/json")
         },
         success: function(data) {
-            alert('yay!');
+            console.log('yay! you called json!');
         },
         error: function(err) {
             console.log("uh oh spaghettis " + err.responseText);
