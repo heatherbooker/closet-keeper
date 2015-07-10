@@ -31,6 +31,8 @@ function displayClothing(clothingItem, div) {
 
 }
 
+var clothingArray = [];
+
 
 $(document).ready(function() {
 
@@ -45,6 +47,8 @@ $(document).ready(function() {
             request.overrideMimeType("application/json")
         },
         success: function(data) {
+            clothingArray = eval(data.jsonClothing);
+            updateView(clothingArray);
             console.log('yay! you called json!');
         },
         error: function(err) {

@@ -14,7 +14,7 @@ body {
 }
 
 .navbar {
-    background-color: black;
+    background-color: #0F101A;
 }
 
 a {
@@ -29,7 +29,6 @@ a:hover {
     background-color: #4D546B;
     color: white;
 }
-
 /*<div class="bg" style="background:#670D0F">
 </div>
 <div  class="bg" style="background:#F01945">
@@ -90,6 +89,22 @@ a:hover {
 }
 /*stolen sidebar css*/
 
+#bagoo-sidebar {
+    background-color: #241D38;
+}
+
+#bagoo-sidebar.affix-top {
+    position: static;
+    margin-top: 30px;
+    width: 228px;
+}
+
+#bagoo-sidebar.affix {
+    position: fixed;
+    top: 70px;
+    width: 228px;
+}
+
 .sidebar-nav li {
     line-height: 40px;
 }
@@ -103,8 +118,9 @@ a:hover {
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #020202;
-    /*color: white;*/
+    /*color: #020202;*/
+    
+    color: white;
 }
 
 .sidebar-nav li a:hover {
@@ -125,12 +141,14 @@ a:hover {
 }
 
 .sidebar-nav > .sidebar-brand a {
-    color: #030303;
+    /*color: #030303;*/
+    
+    color: white;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
     color: #9A9A9A;
-    background: none;
+    /*background: none;*/
 }
 
 .bagoo-sm-menu {
