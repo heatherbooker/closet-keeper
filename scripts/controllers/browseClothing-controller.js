@@ -40,7 +40,6 @@ $(document).ready(function() {
     $.ajax({
         type: "get",
         dataType: "json",
-        mimeType: "application/JSON",
         url: "../scripts/models/clothes.json",
         beforeSend: function(request) {
             request.overrideMimeType("application/json")
