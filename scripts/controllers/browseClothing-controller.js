@@ -10,11 +10,11 @@ function updateView(clothingArray) {
 
 var clothes = [];
 
-function makeClothingArray(end) {
+function makeClothingArray(jsonArray) {
 
-    for (var i = 0; i < end; i++) {
+    for (var i = 0; i < jsonArray.length; i++) {
 
-        var c = new Clothing(['a', 'a'], 'b', 'c', 'd', '../assets/images/' + i + '.jpg');
+        var c = new Clothing(jsonArray[i].keywords, 'b', 'c', 'd', '../assets/images/' + i + '.jpg');
         clothes.push(c);
 
     }
@@ -47,9 +47,10 @@ $(document).ready(function() {
             request.overrideMimeType("application/json")
         },
         success: function(data) {
-            clothingArray = eval(data.jsonClothing);
-            updateView(clothingArray);
-            console.log('yay! you called json!');
+            //clothingArray = makeClothingArray(data.jsonClothing);
+            //updateView(clothingArray);
+            console.log(data.jsonClothing);
+            console.log(JSON.stringify(data) + 'yay! you called json!');
         },
         error: function(err) {
             console.log("uh oh spaghettis " + err.responseText);
