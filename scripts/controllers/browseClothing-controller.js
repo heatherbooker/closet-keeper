@@ -17,7 +17,7 @@ function makeClothingArray(jsonArray) {
 
     for (var i = 0; i < jsonArray.length; i++) {
 
-        var c = new Clothing(jsonArray[i].keywords, 'b', 'c', 'd', '../assets/images/' + i + '.jpg');
+        var c = new Clothing(jsonArray[i].keywords, jsonArray[i].type, jsonArray[i].use, jsonArray[i].color, '../assets/images/' + i + '.jpg');
         clothes.push(c);
 
     }
