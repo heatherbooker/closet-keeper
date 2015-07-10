@@ -42,7 +42,32 @@ function search(searchTerms) {
 ///
 
 
-function newClothingObjectToParse() {
+function getFile() {
+
+    var fileUploadControl = $("#imageFileInput")[0];
+
+    if (fileUploadControl.files.length > 0) {
+        var file = fileUploadControl.files[0];
+        var name = "photo.jpg";
+
+        var parseFile = new Parse.File(name, file);
+
+        newClothingObjectToParse(parseFile);
+    }
+
+}
+
+function newClothingObjectToParse(imageForParse) {
+
+
+
+    imageForParse.save().then(function() {
+        // The file has been saved to Parse.
+        console.log('yay pictur saved');
+    }, function(error) {
+        // The file either could not be read, or could not be saved to Parse.
+        console.log('whyyyyy');
+    });
 
     //Extend the native Parse.Object class.
     var clothes = Parse.Object.extend("clothes");
@@ -53,9 +78,9 @@ function newClothingObjectToParse() {
     //listItem is now the object that we want to save, so we assign the properties that we want on it.
     articleOfClothing.set("color", "blue");
     articleOfClothing.set("type", "dress");
-    articleOfClothing.set("image", "../assets/images/16.jpg");
+    articleOfClothing.set("img", imageForParse);
     articleOfClothing.set("use", "salsa");
-    articleOfClothing.set("keywords", "purdy");
+    articleOfClothing.set("keywords", "new");
 
     //We call the save method, and pass in success and failure callback functions.
     articleOfClothing.save(null, {
@@ -67,6 +92,21 @@ function newClothingObjectToParse() {
         }
     });
 };
+
+// var parseFile = new Parse.File("photoOfThing", ../../assets/images/16.jpg);
+
+// parseFile.save().then(function() {
+//   // The file has been saved to Parse.
+//   console.log('yay pictur saved');
+// }, function(error) {
+//   // The file either could not be read, or could not be saved to Parse.
+//   console.log('whyyyyy');
+// });
+
+// var jobApplication = new Parse.Object("JobApplication");
+// jobApplication.set("applicantName", "Joe Smith");
+// jobApplication.set("applicantResumeFile", parseFile);
+// jobApplication.save();
 
 
 
