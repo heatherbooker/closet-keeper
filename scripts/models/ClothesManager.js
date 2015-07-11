@@ -1,76 +1,110 @@
 function ClothesManager() {
 
     var clothes = Parse.Object.extend("clothes");
-    //does parse.init need to be in a function or....?
+
     Parse.initialize("qmqVorzxIpQRkEbanvb8hczUA0PgxF3CVaDeUGJt", "bXUQxAnUNjdnkeV5GUyuwp5hY0yOL6bCFH3V98X1");
 
-    return {
+    var fullArray = [];
 
-        search: function() {
+    var searchArray = [];
 
-            nerpnerp
-            getArticle();
-        },
+    var search = function() {
+        nerpnerp
+        getArticle();
+    };
 
-        getArticle: function() {
+    var makeQueryToParse = function(typeOfQuery, endBracket, callbackFunction) {
 
-            var query = new Parse.Query(clothes);
+        var query = new Parse.Query(clothes);
 
-            var successOrError = {
+        typeOfQuery {
 
-                success: function(articles) {
-                    console.log('woot parse objects successfully retrieved!');
-                    //what shall we do now with our articles?
-                },
+            success: function(articles) {
+                console.log('woot parse objects successfully retrieved!');
+                callbackFunction(articles);
+            },
 
-                error: function(object, error) {
-                    console.log('oh boogers parse objects not retrieved: ' + error.code + error.message);
-                }
-
+            error: function(object, error) {
+                console.log('oh boogers parse objects not retrieved: ' + error.code + error.message);
             }
 
-            //how would you like to get the article?
-            query.exists("img");
-            query.find(successOrError);
-        },
-        updateArticle: function() {
-            getArticle();
-            article.set('key', newValue)
-        },
-        removeArticle: function() {
-
-        },
-
-        addArticle: function(keywords, type, use, color, imageFile) {
-
-            var article = new clothes();
-
-            article.set("keywords", keywords);
-            article.set("type", type);
-            article.set("use", use);
-            article.set("color", color);
-            article.set("img", imageFile);
-
-            saveArticle(article)
-
-        },
-
-        saveArticle: function(articleToSave) {
-
-            articleToSave.save(null, {
-
-                success: function(item) {
-                    //Success Callback 
-                    console.log('New article of clothing successfully saved to data storage (parse)!')
-                },
-                error: function(item, error) {
-                    //Failure Callback
-                    console.log('unable to save new article to parse')
-                }
-
-            });
         }
+        endBracket;
+    }
 
+    var makeClothingArray = function() {
+
+        var queryRules = 'query.exists("img"); query.find(';
+        makeQueryToParse(queryRules, ")", "makeArrayFromParseJSON");
+
+    };
+
+
+    var accessParseArticle = function(id, callbackFunction) {
+
+        var queryRules = 'query.get(' + id + ', ';
+        makeQueryToParse(queryRules, ")", callbackFunction);
+
+    };
+
+
+    var updateArticle = function(id, attributeToUpdate, newValue) {
+
+        accessParseArticle(id, function(article) {
+
+            article.set(attributeToUpdate, newValue)
+            saveArticle(article);
+
+        });
+
+    };
+
+    var removeArticle = function(id) {
+
+        accessParseArticle(id, function(article) {
+            article.destroy({
+                success: function() {
+                    console.log("Article successfully removed from system");
+                },
+                error: function(article, error) {
+                    console.log("Unable to destroy article! Reason: " + error.code + error.message);
+                }
+            });
+        });
+
+
+    };
+
+    var addArticle = function(keywords, type, use, color, imageFile) {
+
+        var article = new clothes();
+
+        article.set("keywords", keywords);
+        article.set("type", type);
+        article.set("use", use);
+        article.set("color", color);
+        article.set("img", imageFile);
+
+        saveArticle(article);
+
+    };
+
+    var saveArticle = function(articleToSave) {
+
+        articleToSave.save(null, {
+
+            success: function(item) {
+                console.log('Save successful!')
+            },
+            error: function(item, error) {
+                console.log('Unable to save: ' + error.code + error.message);
+            }
+
+        });
+    }
+
+    return {
+        function: function,
     }
 }
 
