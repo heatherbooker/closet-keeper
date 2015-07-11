@@ -3,7 +3,7 @@ $(document).ready(function() {
     $('[data-toggle="tooltip"]').tooltip();
 });
 
-
+//ask clothesmanager for salsa clothes
 
 var clothingArray = [];
 
@@ -15,7 +15,13 @@ var clothes = Parse.Object.extend("clothes");
 
 function displayClothing(imageURL, keyValuePair, div) {
 
-    var imageHTML = '<center><a href="#" data-toggle="tooltip" title="' + keyValuePair + '"><img class="img-responsive" src="' + imageURL + '"></a></center>';
+    if (this is first page load) {
+        var imageHTML = '<center><img class="img-responsive" src="' + imageURL + '"></center>';
+    }
+
+    if (this is fer a search) {
+        var imageHTML = '<center><a href="#" data-toggle="tooltip" title="' + keyValuePair + '"><img class="img-responsive" src="' + imageURL + '"></a></center>';
+    }
 
     var divName = "div" + div;
 
@@ -23,21 +29,14 @@ function displayClothing(imageURL, keyValuePair, div) {
 
 }
 
-function updateView(arrayOfClothing, searchTerm) {
+function updateView(searchArray, searchTerm) {
 
 
 
-    for (var i = 0; i < arrayOfClothing.length; i++) {
+    for (var i = 0; i < searchArray.length; i++) {
 
-        while (arrayOfClothing.length < 16) {
 
-            arrayOfClothing.push({
-                imgURL: "https://placeholdit.imgix.net/~text?txtsize=60&txt=%5Bimg%5D&w=330&h=330"
-            });
-
-        };
-
-        displayClothing(arrayOfClothing[i].imgURL, searchTerm, i)
+        displayClothing(searchArray[i].imgURL, searchTerm, i)
 
     }
 }
