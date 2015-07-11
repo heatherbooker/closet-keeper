@@ -1,3 +1,10 @@
+//enable pop up text box 
+$(document).ready(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+});
+
+
+
 var clothingArray = [];
 
 Parse.initialize("qmqVorzxIpQRkEbanvb8hczUA0PgxF3CVaDeUGJt", "bXUQxAnUNjdnkeV5GUyuwp5hY0yOL6bCFH3V98X1");
@@ -6,14 +13,33 @@ var clothes = Parse.Object.extend("clothes");
 
 
 
-function displayClothing(clothingObject, div) {
+function displayClothing(imageURL, keyValuePair, div) {
 
-    var imageHTML = '<center><img class="img-responsive" src="' + clothingObject.image + '"></center>';
+    var imageHTML = '<center><a href="#" data-toggle="tooltip" title="' + keyValuePair + '"><img class="img-responsive" src="' + imageURL + '"></a></center>';
 
     var divName = "div" + div;
 
     document.getElementById(divName).innerHTML = imageHTML;
 
+}
+
+function updateView(arrayOfClothing, searchTerm) {
+
+
+
+    for (var i = 0; i < arrayOfClothing.length; i++) {
+
+        while (arrayOfClothing.length < 16) {
+
+            arrayOfClothing.push({
+                imgURL: "https://placeholdit.imgix.net/~text?txtsize=60&txt=%5Bimg%5D&w=330&h=330"
+            });
+
+        };
+
+        displayClothing(arrayOfClothing[i].imgURL, searchTerm, i)
+
+    }
 }
 
 
@@ -42,7 +68,7 @@ function makeArrayFromParseJSON(JSONofArticlesFromParse) {
         createArticleFromParse(JSONofArticlesFromParse, i);
     }
 
-    console.log(clothingArray);
+    updateView(clothingArray);
 }
 
 function createArticleFromParse(arrayOfArticles, iteration) {
@@ -60,9 +86,31 @@ function createArticleFromParse(arrayOfArticles, iteration) {
 
 }
 
+function searchByKeyword() {
+
+    //get user input
+    var searchTerm = document.getElementById('searchBar').value;
+
+    //make new array containing only objects whose keywords match searchTerm
+    var searchResultsArray =
+        $.grep(clothingArray, function(objectInArray) {
+            return objectInArray.keywords === searchTerm;
+        });
+
+    updateView(searchResultsArray, searchTerm);
+}
+
+//make enter work same as pushing search button
+$("#searchBar").keyup(function(event) {
+    if (event.keyCode == 13) {
+        $("#searchbtn").click();
+    }
+});
+
+
+
 $(document).ready(function() {
 
     makeClothingArray();
-
 
 });
