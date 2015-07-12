@@ -5,8 +5,10 @@ var clothesManager = new ClothesManager;
 
 clothesManager.loadArray();
 
-clothesManager.addArticle('hat', 'shirt', 'snip', 'boollll');
+// clothesManager.addArticle('hat', 'shirt', 'snip', 'boollll');
 
-clothesManager.updateArticle('UJAFQf0LeN', 'color', 'purple');
+// clothesManager.updateArticle('BuUboIgXeq', 'color', 'purple');
 
-clothesManager.deleteArticle('UJAFQf0LeN');
+// clothesManager.deleteArticle('UJAFQf0LeN');
+
+//clothesManager.accessArticle('BuUboIgXeq');

@@ -102,7 +102,8 @@ function ClothesManager() {
         loadArray: loadArray,
         addArticle: addArticle,
         updateArticle: updateArticle,
-        deleteArticle: deleteArticle
+        deleteArticle: deleteArticle,
+        accessArticle: accessArticle
     }
 
 }
