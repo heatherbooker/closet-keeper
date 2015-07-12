@@ -19,7 +19,7 @@ function ClothesManager() {
 
         var query = new Parse.Query(clothes);
 
-        query.get(("'" + id + "'"), {
+        query.get(id, {
 
             success: function(articles) {
                 console.log('woot parse objects successfully retrieved!');
@@ -66,7 +66,7 @@ function ClothesManager() {
     var accessParseArticle = function(id, callbackFunction) {
 
         var queryRules = 'query.get(' + id + ', ';
-        makeQueryToParse(queryRules, ")", callbackFunction);
+        makeQueryToParse(id, callbackFunction);
 
     };
 
@@ -82,7 +82,7 @@ function ClothesManager() {
 
     };
 
-    var removeArticle = function(id) {
+    var deleteArticle = function(id) {
 
         accessParseArticle(id, function(article) {
             article.destroy({
@@ -129,7 +129,7 @@ function ClothesManager() {
     return {
         saveArticle: saveArticle,
         addArticle: addArticle,
-        removeArticle: removeArticle,
+        deleteArticle: deleteArticle,
         updateArticle: updateArticle,
         makeQueryToParse: makeQueryToParse
     }
