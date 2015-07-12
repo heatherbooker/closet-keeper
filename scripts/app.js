@@ -1,4 +1,4 @@
-clothesManager = new ClothesManager;
+var clothesManager = new ClothesManager;
 
 //test all functions
 

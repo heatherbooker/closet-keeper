@@ -1,8 +1,8 @@
 function ClothesManager() {
 
-    var clothes = Parse.Object.extend("clothes");
-
     Parse.initialize("qmqVorzxIpQRkEbanvb8hczUA0PgxF3CVaDeUGJt", "bXUQxAnUNjdnkeV5GUyuwp5hY0yOL6bCFH3V98X1");
+
+    var clothes = Parse.Object.extend("clothes");
 
     var fullArray = [];
 
@@ -15,13 +15,13 @@ function ClothesManager() {
         getArticle();
     };
 
-    var makeQueryToParse = function(typeOfQuery, endBracket, callbackFunction) {
+    var makeQueryToParse = function(callbackFunction) {
 
         var query = new Parse.Query(clothes);
         //should i make a var here to be the end bracket? or leave it as an argument?
         //var endBracket = ")";
 
-        typeOfQuery {
+        query.get('id', {
 
             success: function(articles) {
                 console.log('woot parse objects successfully retrieved!');
@@ -32,8 +32,7 @@ function ClothesManager() {
                 console.log('oh boogers parse objects not retrieved: ' + error.code + error.message);
             }
 
-        }
-        endBracket;
+        });
     }
 
     var makeClothingArray = function() {
@@ -130,7 +129,11 @@ function ClothesManager() {
     }
 
     return {
-        function: function,
+        saveArticle: saveArticle,
+        addArticle: addArticle,
+        removeArticle: removeArticle,
+        updateArticle: updateArticle,
+        makeQueryToParse: makeQueryToParse
     }
 }
 
