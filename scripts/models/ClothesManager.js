@@ -15,13 +15,11 @@ function ClothesManager() {
         getArticle();
     };
 
-    var makeQueryToParse = function(callbackFunction) {
+    var makeQueryToParse = function(id, callbackFunction) {
 
         var query = new Parse.Query(clothes);
-        //should i make a var here to be the end bracket? or leave it as an argument?
-        //var endBracket = ")";
 
-        query.get('id', {
+        query.get(("'" + id + "'"), {
 
             success: function(articles) {
                 console.log('woot parse objects successfully retrieved!');
