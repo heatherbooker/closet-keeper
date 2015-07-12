@@ -2,14 +2,11 @@ var clothesManager = new ClothesManager;
 
 //test all functions
 
-//clothesManager.getFullArray;
 
-//clothesManager.saveArticle;
+clothesManager.loadArray();
 
-clothesManager.addArticle('hat', 'shirt', 'snip', 'boot');
+clothesManager.addArticle('hat', 'shirt', 'snip', 'boollll');
 
-clothesManager.deleteArticle('YZVmkG18fi');
+clothesManager.updateArticle('UJAFQf0LeN', 'color', 'purple');
 
-clothesManager.updateArticle('YZVmkG18fi', 'color', 'purple');
-
-//clothesManager.makeQueryToParse;
+clothesManager.deleteArticle('UJAFQf0LeN');

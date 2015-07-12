@@ -6,85 +6,58 @@ function ClothesManager() {
 
     var fullArray = [];
 
-    var searchArray = [];
 
-    this.getFullArray = fullArray;
-
-    var search = function() {
-        nerpnerp
-        getArticle();
-    };
-
-    var makeQueryToParse = function(id, callbackFunction) {
+    var loadArray = function() {
 
         var query = new Parse.Query(clothes);
 
-        query.get(id, {
+        query.find({
 
-            success: function(articles) {
-                console.log('woot parse objects successfully retrieved!');
-                callbackFunction(articles);
+            success: function(arrayOfArticles) {
+
+                console.log("Successfully retrieved " + arrayOfArticles.length + " articles.");
+
+                for (var i = 0; i < arrayOfArticles.length; i++) {
+                    fullArray.push(arrayOfArticles[i]);
+                }
+
             },
 
-            error: function(object, error) {
-                console.log('oh boogers parse objects not retrieved: ' + error.code + error.message);
-            }
+            error: function(error) {
 
+                console.log("Unable to retrieve articles from Parse: " + error.code + " " + error.message);
+            }
         });
     }
 
-    var makeClothingArray = function() {
 
-        var queryRules = 'query.exists("img"); query.find(';
-        makeQueryToParse(queryRules, ")", "makeFullArray");
+    var accessArticle = function(articleID, callbackFunction) {
 
-    };
+        for (var i = 0; i < fullArray.length; i++) {
 
-    function makeFullArray(articles) {
-
-        for (var i = 0; i < articles.length; i++) {
-            createArticleAndPush(articles, i);
+            if (fullArray[i].id === articleID) {
+                callbackFunction(fullArray[i])
+            }
         }
-
     }
-
-    function createArticleAndPush(articles, iteration) {
-
-        var originalAttributes = articles[iteration].attributes;
-
-        var imgParseURL = originalAttributes.img._url;
-        delete originalAttributes.img;
-        var idAttribute = articles[iteration].id;
-
-        originalAttributes.parseId = idAttribute;
-        originalAttributes.imgURL = imgParseURL;
-
-        fullArray.push(originalAttributes);
-
-    }
-
-    var accessParseArticle = function(id, callbackFunction) {
-
-        var queryRules = 'query.get(' + id + ', ';
-        makeQueryToParse(id, callbackFunction);
-
-    };
 
 
     var updateArticle = function(id, attributeToUpdate, newValue) {
 
-        accessParseArticle(id, function(article) {
+        accessArticle(id, function(article) {
 
-            article.set(attributeToUpdate, newValue)
+            article.set(attributeToUpdate, newValue);
             saveArticle(article);
 
         });
 
     };
 
+
     var deleteArticle = function(id) {
 
-        accessParseArticle(id, function(article) {
+        accessArticle(id, function(article) {
+
             article.destroy({
                 success: function() {
                     console.log("Article successfully removed from system");
@@ -93,10 +66,11 @@ function ClothesManager() {
                     console.log("Unable to destroy article! Reason: " + error.code + error.message);
                 }
             });
+
         });
 
-
     };
+
 
     var addArticle = function(keywords, type, use, color, imageFile) {
 
@@ -112,7 +86,8 @@ function ClothesManager() {
 
     };
 
-    var saveArticle = function(articleToSave) {
+
+    function saveArticle(articleToSave) {
 
         articleToSave.save(null, {
 
@@ -126,13 +101,12 @@ function ClothesManager() {
         });
     }
 
-    return {
-        saveArticle: saveArticle,
-        addArticle: addArticle,
-        deleteArticle: deleteArticle,
-        updateArticle: updateArticle,
-        makeQueryToParse: makeQueryToParse
-    }
-}
 
-//return array of salsa clothes to controller
+    return {
+        loadArray: loadArray,
+        addArticle: addArticle,
+        updateArticle: updateArticle,
+        deleteArticle: deleteArticle
+    }
+
+}
