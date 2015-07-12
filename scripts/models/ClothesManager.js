@@ -8,6 +8,8 @@ function ClothesManager() {
 
     var searchArray = [];
 
+    this.getFullArray = fullArray;
+
     var search = function() {
         nerpnerp
         getArticle();
@@ -16,6 +18,8 @@ function ClothesManager() {
     var makeQueryToParse = function(typeOfQuery, endBracket, callbackFunction) {
 
         var query = new Parse.Query(clothes);
+        //should i make a var here to be the end bracket? or leave it as an argument?
+        //var endBracket = ")";
 
         typeOfQuery {
 
@@ -35,10 +39,32 @@ function ClothesManager() {
     var makeClothingArray = function() {
 
         var queryRules = 'query.exists("img"); query.find(';
-        makeQueryToParse(queryRules, ")", "makeArrayFromParseJSON");
+        makeQueryToParse(queryRules, ")", "makeFullArray");
 
     };
 
+    function makeFullArray(articles) {
+
+        for (var i = 0; i < articles.length; i++) {
+            createArticleAndPush(articles, i);
+        }
+
+    }
+
+    function createArticleAndPush(articles, iteration) {
+
+        var originalAttributes = articles[iteration].attributes;
+
+        var imgParseURL = originalAttributes.img._url;
+        delete originalAttributes.img;
+        var idAttribute = articles[iteration].id;
+
+        originalAttributes.parseId = idAttribute;
+        originalAttributes.imgURL = imgParseURL;
+
+        fullArray.push(originalAttributes);
+
+    }
 
     var accessParseArticle = function(id, callbackFunction) {
 
