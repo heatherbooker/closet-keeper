@@ -31,12 +31,12 @@ function ClothesManager() {
     }
 
 
-    var accessArticle = function(articleID, callbackFunction) {
+    var accessArticle = function(articleID) {
 
         for (var i = 0; i < fullArray.length; i++) {
 
             if (fullArray[i].id === articleID) {
-                callbackFunction(fullArray[i])
+                return fullArray[i];
             }
         }
     }
@@ -44,29 +44,25 @@ function ClothesManager() {
 
     var updateArticle = function(id, attributeToUpdate, newValue) {
 
-        accessArticle(id, function(article) {
+        var article = accessArticle(id);
 
-            article.set(attributeToUpdate, newValue);
-            saveArticle(article);
-
-        });
+        article.set(attributeToUpdate, newValue);
+        saveArticle(article);
 
     };
 
 
     var deleteArticle = function(id) {
 
-        accessArticle(id, function(article) {
+        var article = accessArticle(id);
 
-            article.destroy({
-                success: function() {
-                    console.log("Article successfully removed from system");
-                },
-                error: function(article, error) {
-                    console.log("Unable to destroy article! Reason: " + error.code + error.message);
-                }
-            });
-
+        article.destroy({
+            success: function() {
+                console.log("Article successfully removed from system");
+            },
+            error: function(article, error) {
+                console.log("Unable to destroy article! Reason: " + error.code + error.message);
+            }
         });
 
     };
@@ -110,3 +106,11 @@ function ClothesManager() {
     }
 
 }
+
+
+
+//make new array containing only objects whose keywords match searchTerm
+// var searchResultsArray =
+//     $.grep(clothingArray, function(objectInArray) {
+//         return objectInArray.keywords === searchTerm;
+//     });

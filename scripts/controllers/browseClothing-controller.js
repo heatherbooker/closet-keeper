@@ -1,16 +1,7 @@
-// //enable pop up text box 
-// $(document).ready(function() {
-//     $('[data-toggle="tooltip"]').tooltip();
-// });
-
-// //ask clothesmanager for salsa clothes
-
-// var clothingArray = [];
-
-// Parse.initialize("qmqVorzxIpQRkEbanvb8hczUA0PgxF3CVaDeUGJt", "bXUQxAnUNjdnkeV5GUyuwp5hY0yOL6bCFH3V98X1");
-
-// var clothes = Parse.Object.extend("clothes");
-
+//enable pop up text box 
+$(document).ready(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+});
 
 
 // function displayClothing(imageURL, keyValuePair, div) {
@@ -29,17 +20,16 @@
 
 // }
 
-// function updateView(searchArray, searchTerm) {
+function updateView(searchArray, searchTerm) {
 
 
+    for (var i = 0; i < searchArray.length; i++) {
 
-//     for (var i = 0; i < searchArray.length; i++) {
 
+        displayClothing(searchArray[i].imgURL, searchTerm, i)
 
-//         displayClothing(searchArray[i].imgURL, searchTerm, i)
-
-//     }
-// }
+    }
+}
 
 
 // function makeClothingArray() {
@@ -61,50 +51,23 @@
 //     });
 // }
 
-// function makeArrayFromParseJSON(JSONofArticlesFromParse) {
 
-//     for (var i = 0; i < JSONofArticlesFromParse.length; i++) {
-//         createArticleFromParse(JSONofArticlesFromParse, i);
-//     }
+function searchByKeyword() {
 
-//     updateView(clothingArray);
-// }
+    //get user input
+    var searchTerm = document.getElementById('searchBar').value;
 
-// function createArticleFromParse(arrayOfArticles, iteration) {
+    //ASK CLOTHESmanager 
 
-//     var originalAttributes = arrayOfArticles[iteration].attributes;
+    updateView(searchResultsArray, searchTerm);
+}
 
-//     var imgParseURL = originalAttributes.img._url;
-//     delete originalAttributes.img;
-//     var idAttribute = arrayOfArticles[iteration].id;
-
-//     originalAttributes.parseId = idAttribute;
-//     originalAttributes.imgURL = imgParseURL;
-
-//     clothingArray.push(originalAttributes);
-
-// }
-
-// function searchByKeyword() {
-
-//     //get user input
-//     var searchTerm = document.getElementById('searchBar').value;
-
-//     //make new array containing only objects whose keywords match searchTerm
-//     var searchResultsArray =
-//         $.grep(clothingArray, function(objectInArray) {
-//             return objectInArray.keywords === searchTerm;
-//         });
-
-//     updateView(searchResultsArray, searchTerm);
-// }
-
-// //make enter work same as pushing search button
-// $("#searchBar").keyup(function(event) {
-//     if (event.keyCode == 13) {
-//         $("#searchbtn").click();
-//     }
-// });
+//make enter work same as pushing search button
+$("#searchBar").keyup(function(event) {
+    if (event.keyCode == 13) {
+        $("#searchbtn").click();
+    }
+});
 
 
 
