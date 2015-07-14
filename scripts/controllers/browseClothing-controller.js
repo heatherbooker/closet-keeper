@@ -16,13 +16,17 @@ function displayClothing(imageURL, div) {
 
 function updateView(clothingDictionary) {
 
-    for (var key in clothingDictionary) {
+    var i = 0;
 
-        var i = 0;
+    for (var key in clothingDictionary) {
 
         if (clothingDictionary.hasOwnProperty(key)) {
 
-            displayClothing(clothingDictionary[key].attributes.img._url, i);
+            if (clothingDictionary[key].attributes.hasOwnProperty("img")) {
+
+                displayClothing(clothingDictionary[key].attributes.img._url, i);
+
+            }
 
             i++;
 

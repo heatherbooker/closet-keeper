@@ -3,7 +3,7 @@ var clothesManager = new ClothesManager;
 //test all functions
 
 
-clothesManager.loadArray();
+clothesManager.loadClothingDictionary();
 
 // clothesManager.addArticle('hat', 'shirt', 'snip', 'boollll');
 
