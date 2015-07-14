@@ -4,52 +4,32 @@ $(document).ready(function() {
 });
 
 
-// function displayClothing(imageURL, keyValuePair, div) {
+function displayClothing(imageURL, div) {
 
-//     if (this is first page load) {
-//         var imageHTML = '<center><img class="img-responsive" src="' + imageURL + '"></center>';
-//     }
+    var imageHTML = '<center><img class="img-responsive" src="' + imageURL + '"></center>';
 
-//     if (this is fer a search) {
-//         var imageHTML = '<center><a href="#" data-toggle="tooltip" title="' + keyValuePair + '"><img class="img-responsive" src="' + imageURL + '"></a></center>';
-//     }
+    var divName = "div" + div;
 
-//     var divName = "div" + div;
+    document.getElementById(divName).innerHTML = imageHTML;
 
-//     document.getElementById(divName).innerHTML = imageHTML;
+}
 
-// }
+function updateView(clothingDictionary) {
 
-function updateView(searchArray, searchTerm) {
+    for (var key in clothingDictionary) {
 
+        var i = 0;
 
-    for (var i = 0; i < searchArray.length; i++) {
+        if (clothingDictionary.hasOwnProperty(key)) {
 
+            displayClothing(clothingDictionary[key].attributes.img._url, i);
 
-        displayClothing(searchArray[i].imgURL, searchTerm, i)
+            i++;
 
+        }
     }
 }
 
-
-// function makeClothingArray() {
-
-//     var query = new Parse.Query(clothes);
-
-//     query.exists("img");
-//     query.find({
-
-//         success: function(articles) {
-//             console.log('woot parse objects successfully retrieved!');
-//             makeArrayFromParseJSON(articles);
-//         },
-
-//         error: function(object, error) {
-//             console.log('oh boogers parse objects not retrieved: ' + error.code + error.message);
-//         }
-
-//     });
-// }
 
 
 function searchByKeyword() {
@@ -59,7 +39,7 @@ function searchByKeyword() {
 
     //ASK CLOTHESmanager 
 
-    updateView(searchResultsArray, searchTerm);
+    updateView(searchArray);
 }
 
 //make enter work same as pushing search button

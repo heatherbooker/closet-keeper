@@ -4,8 +4,11 @@ function ClothesManager() {
 
     var clothes = Parse.Object.extend("clothes");
 
-    var fullArray = [];
+    var clothingDictionary = {};
 
+    var getClothingDictionary = function() {
+        return clothingDictionary;
+    }
 
     var loadArray = function() {
 
@@ -18,7 +21,8 @@ function ClothesManager() {
                 console.log("Successfully retrieved " + arrayOfArticles.length + " articles.");
 
                 for (var i = 0; i < arrayOfArticles.length; i++) {
-                    fullArray.push(arrayOfArticles[i]);
+                    var key = arrayOfArticles[i].id;
+                    clothingDictionary[key] = arrayOfArticles[i];
                 }
 
             },
@@ -33,12 +37,8 @@ function ClothesManager() {
 
     var accessArticle = function(articleID) {
 
-        for (var i = 0; i < fullArray.length; i++) {
+        return clothingDictionary[articleID];
 
-            if (fullArray[i].id === articleID) {
-                return fullArray[i];
-            }
-        }
     }
 
 
@@ -103,7 +103,8 @@ function ClothesManager() {
         addArticle: addArticle,
         updateArticle: updateArticle,
         deleteArticle: deleteArticle,
-        accessArticle: accessArticle
+        accessArticle: accessArticle,
+        getClothingDictionary: getClothingDictionary
     }
 
 }
