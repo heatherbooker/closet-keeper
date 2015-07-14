@@ -43,6 +43,8 @@ function searchByKeyword() {
 
     //ASK CLOTHESmanager 
 
+    var searchArray = clothesManager.search(searchTerm);
+
     updateView(searchArray);
 }
 

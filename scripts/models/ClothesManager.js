@@ -25,6 +25,8 @@ function ClothesManager() {
                     clothingDictionary[key] = arrayOfArticles[i];
                 }
 
+                updateView(clothingDictionary);
+
             },
 
             error: function(error) {
@@ -97,6 +99,24 @@ function ClothesManager() {
         });
     }
 
+    function search(searchTerm) {
+
+        var searchArray = [];
+
+        for (var key in clothingDictionary) {
+
+            if (clothingDictionary.hasOwnProperty(key)) {
+
+                if (clothingDictionary[key].attributes.keywords === searchTerm) {
+
+                    searchArray.push(clothingDictionary[key]);
+                }
+            }
+        }
+
+        return searchArray;
+    }
+
 
     return {
         loadClothingDictionary: loadClothingDictionary,
@@ -104,7 +124,8 @@ function ClothesManager() {
         updateArticle: updateArticle,
         deleteArticle: deleteArticle,
         accessArticle: accessArticle,
-        getClothingDictionary: getClothingDictionary
+        getClothingDictionary: getClothingDictionary,
+        search: search
     }
 
 }
