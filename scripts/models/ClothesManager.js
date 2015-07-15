@@ -101,7 +101,7 @@ function ClothesManager() {
 
     function search(searchTerm) {
 
-        var searchArray = [];
+        var searchDictionary = [];
 
         for (var key in clothingDictionary) {
 

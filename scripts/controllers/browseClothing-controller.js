@@ -1,20 +1,28 @@
 //enable pop up text box 
 $(document).ready(function() {
+
     $('[data-toggle="tooltip"]').tooltip();
+
 });
 
 
-function displayClothing(imageURL, div) {
+function displayClothing(imageURL, isAnImg, div) {
 
-    var imageHTML = '<center><img class="img-responsive" src="' + imageURL + '"></center>';
+    if (isAnImg) {
+
+        var fillDiv = '<center><img class="img-responsive" src="' + imageURL + '"></center>';
+    } else if (!isAnImg) {
+        var fillDiv = "";
+    }
 
     var divName = "div" + div;
 
-    document.getElementById(divName).innerHTML = imageHTML;
+    document.getElementById(divName).innerHTML = fillDiv;
 
 }
 
-function updateView(clothingDictionary) {
+
+function initialView(clothingDictionary) {
 
     var i = 0;
 
@@ -24,13 +32,18 @@ function updateView(clothingDictionary) {
 
             if (clothingDictionary[key].attributes.hasOwnProperty("img")) {
 
-                displayClothing(clothingDictionary[key].attributes.img._url, i);
-
+                displayClothing(clothingDictionary[key].attributes.img._url, true, i);
             }
 
             i++;
-
         }
+    }
+}
+
+
+function updateView(searchArray) {
+    for (var i = 0; i < 16; i++) {
+
     }
 }
 
@@ -46,6 +59,7 @@ function searchByKeyword() {
     var searchArray = clothesManager.search(searchTerm);
 
     updateView(searchArray);
+
 }
 
 //make enter work same as pushing search button
