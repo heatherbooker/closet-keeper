@@ -11,8 +11,10 @@ function displayClothing(imageURL, isAnImg, div) {
     if (isAnImg) {
 
         var fillDiv = '<center><img class="img-responsive" src="' + imageURL + '"></center>';
+
     } else if (!isAnImg) {
-        var fillDiv = "";
+
+        var fillDiv = " ";
     }
 
     var divName = "div" + div;
@@ -42,8 +44,17 @@ function initialView(clothingDictionary) {
 
 
 function updateView(searchArray) {
+
     for (var i = 0; i < 16; i++) {
 
+        if (searchArray[i]) {
+
+            displayClothing(searchArray[i].attributes.img._url, true, i)
+
+        } else {
+
+            displayClothing(" ", false, i)
+        }
     }
 }
 
@@ -68,11 +79,3 @@ $("#searchBar").keyup(function(event) {
         $("#searchbtn").click();
     }
 });
-
-
-
-// $(document).ready(function() {
-
-//     makeClothingArray();
-
-// });

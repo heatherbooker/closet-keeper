@@ -25,7 +25,7 @@ function ClothesManager() {
                     clothingDictionary[key] = arrayOfArticles[i];
                 }
 
-                updateView(clothingDictionary);
+                initialView(clothingDictionary);
 
             },
 
@@ -101,19 +101,29 @@ function ClothesManager() {
 
     function search(searchTerm) {
 
-        var searchDictionary = [];
+        var searchArray = [];
 
         for (var key in clothingDictionary) {
 
             if (clothingDictionary.hasOwnProperty(key)) {
 
-                if (clothingDictionary[key].attributes.keywords === searchTerm) {
+                var anArticle = clothingDictionary[key];
+                loopOuter: for (var attrib in anArticle) {
 
-                    searchArray.push(clothingDictionary[key]);
+                    if (anArticle.hasOwnProperty(attrib)) {
+
+                        var articleAttribute = anArticle[attrib];
+                        loopInner: for (var descriptor in articleAttribute) {
+
+                            if (articleAttribute[descriptor] === searchTerm) {
+                                searchArray.push(anArticle)
+                                break loopOuter
+                            }
+                        }
+                    }
                 }
             }
         }
-
         return searchArray;
     }
 
