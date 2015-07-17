@@ -85,25 +85,27 @@
                 <div class="row bagoo-eq-height-row">
 
                     <div class="col-lg-2 col-sm-2 col-xs-1 bagoo-eq-height-col" >
-                        <span class="glyphicon glyphicon-chevron-left bagoo-arrow"></span>
+                        <span class="glyphicon glyphicon-chevron-left bagoo-arrow" onclick="showPrevOutfit()"></span>
                     </div>
 
                     <div class="col-lg-8 col-sm-8 col-xs-10">
-                        <div class="row">
-                            <center><img class="img-responsive bagoo-outfit" src="https://placeholdit.imgix.net/~text?txtsize=60&txt=%5Bimg&w=330&h=200"></center>
+                        <div class="row" style="max-height:210px">
+                            <div class="col-xs-12" id="bagoo-home-top">
+                            </div>
                         </div>
 
                         <!-- spacer -->
                         <div class="bagoo-space">
                         </div>
 
-                        <div class="row">
-                            <center><img class="img-responsive bagoo-outfit" src="https://placeholdit.imgix.net/~text?txtsize=60&txt=%5Bimg&w=330&h=200"></center>
+                        <div class="row" style="max-height:210px">
+                            <div class="col-xs-12" id="bagoo-home-bottom">
+                            </div>
                         </div>
                     </div>
 
                     <div class="col-lg-2 col-sm-2 col-xs-1 bagoo-eq-height-col">
-                        <span class="glyphicon glyphicon-chevron-right bagoo-arrow"></span>
+                        <span class="glyphicon glyphicon-chevron-right bagoo-arrow" onclick="showNewOutfit()"></span>
                     </div>
 
                 </div>
@@ -139,13 +141,16 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
         <!-- Flat UI -->
-        <script src="../lib/flatUI/dist/js/vendor/video.js"></script>
-        <script src="../lib/flatUI/dist/js/flat-ui.min.js"></script>
+        <script src="lib/flatUI/dist/js/vendor/video.js"></script>
+        <script src="lib/flatUI/dist/js/flat-ui.min.js"></script>
 
     <!-- Menu Toggle Script -->
     <script src="scripts/Controller.js"></script>
-
-    <!-- test clothesmanager functions -->
+    <!-- Models -->
+    <script src="scripts/models/clothing.js"></script>
+    <!-- Controllers -->
+    <script src="scripts/controllers/index-controller.js"></script>
+    <!-- Clothes Manager -->
     <script src="scripts/models/ClothesManager.js"></script>
     <script src="scripts/app.js"></script>
 

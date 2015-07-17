@@ -10,7 +10,7 @@ function ClothesManager() {
         return clothingDictionary;
     }
 
-    var loadClothingDictionary = function() {
+    var loadClothingDictionary = function(callback) {
 
         var query = new Parse.Query(clothes);
 
@@ -25,7 +25,7 @@ function ClothesManager() {
                     clothingDictionary[key] = arrayOfArticles[i];
                 }
 
-                initialView(clothingDictionary);
+                callback(clothingDictionary);
 
             },
 

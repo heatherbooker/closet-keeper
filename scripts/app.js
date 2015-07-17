@@ -2,7 +2,7 @@ var clothesManager = new ClothesManager;
 
 //test all functions
 
-clothesManager.loadClothingDictionary();
+//clothesManager.loadClothingDictionary(initialView);
 
 // clothesManager.addArticle('hat', 'shirt', 'snip', 'boollll');
 
