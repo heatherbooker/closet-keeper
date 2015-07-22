@@ -2,67 +2,41 @@ $("select").select2({
     ".mbl": 'dropdown-inverse'
 });
 
-Parse.initialize("qmqVorzxIpQRkEbanvb8hczUA0PgxF3CVaDeUGJt", "bXUQxAnUNjdnkeV5GUyuwp5hY0yOL6bCFH3V98X1");
+//make clicking on photo icon function to open file browser for image upload
+$('#bagoo-add-img').click(function() {
+    $('#bagoo-file-input').click();
+});
 
-var clothes = Parse.Object.extend("clothes");
-
-
-function makeNewClothes(imageFile) {
-
-    var articleOfClothing = new clothes();
-
-    articleOfClothing.set("color", "");
-    articleOfClothing.set("type", "");
-    articleOfClothing.set("img", imageFile);
-    articleOfClothing.set("use", "");
-    articleOfClothing.set("keywords", "");
-
-    articleOfClothing.save(null, {
-        success: function(item) {
-            //Success Callback 
-            console.log('New article of clothing successfully saved to data storage (parse)!')
-        },
-        error: function(gameScore, error) {
-            //Failure Callback
-            console.log('unable to save new article to parse')
-        }
-    });
-
-};
-
-
-function changeClothesImage(id) {
-
-    var fileUploadControl = $("#imageFileInput")[0];
-
-    if (fileUploadControl.files.length > 0) {
-        var file = fileUploadControl.files[0];
-        var name = file.name;
-
-        var parseFile = new Parse.File(name, file);
-
-        changeParseImage(id, parseFile);
+function showImg(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            $('#bagoo-display-img')
+                .attr('src', e.target.result)
+                .width(330)
+                .height(340);
+        };
+        reader.readAsDataURL(input.files[0]);
     }
-
 }
 
-function changeParseImage(id, image) {
+//make colorpicker plugin work
+$(function() {
+    $('.bagoo-colorpicker').colorpicker();
+});
 
-    var query = new Parse.Query(clothes);
+function saveArticle() {
+    //get all inputs
+    var keywords = $('#inputKeywords').val();
+    var articleType = $('select#inputType').val();
+    var events = $('select#inputEvent').val();
+    var color = $('.bagoo-colorpicker').colorpicker('getValue', '#ffffff');
+    //$(.colorpicker('getValue')
+    console.log('save function is running')
+    console.log(keywords + articleType + events + color)
 
-    query.get(id, {
-
-        success: function(object) {
-            console.log('woot parse object successfully retrieved!');
-            object.set('img', image)
-            object.save();
-        },
-
-        error: function(object, error) {
-            console.log('oh boogers parse object not retrieved: ' + JSON.stringify(error));
-        }
-
-        //     });
-        // }
-    })
+    //check if already exists
+    //if exists, update
+    //if does not exist, create new
+    //tell user save was successful
 }

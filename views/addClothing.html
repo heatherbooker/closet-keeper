@@ -2,17 +2,16 @@
 <html lang="en">
 
 <head>
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Bagoo Closet | Add Clothing</title>
-
     <!-- reset browser -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/normalize.min.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <!-- Loading Flat UI -->
     <link href="../lib/flatUI/dist/css/flat-ui.min.css" rel="stylesheet">
+    <!-- Colorpicker -->
+    <link rel="stylesheet" href="../lib/bootstrap-colorpicker-master/dist/css/bootstrap-colorpicker.min.css">
     <!-- google font -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
     <!-- my styles -->
@@ -20,42 +19,29 @@
     <link rel="stylesheet" href="../styles/add-clothing.css">
     <!-- Parse -->
     <script src="//www.parsecdn.com/js/parse-1.4.2.min.js"></script>
-
 </head>
 
-
 <body>
-
     <div class="container">
-
         <!-- top bar with title and menu icon -->
-
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-
-        <div class="row">
-
-            <!-- menu icon -->
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 bagoo-skinny-col">
-                <a href="#menu-toggle" class="btn btn-default bagoo-slide-btn" id="menu-toggle">
-                    <span class="glyphicon glyphicon-menu-hamburger"></span>
-                </a>
+            <div class="row">
+                <!-- menu icon -->
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 bagoo-skinny-col">
+                    <a href="#menu-toggle" class="btn btn-default bagoo-slide-btn" id="menu-toggle">
+                        <span class="glyphicon glyphicon-menu-hamburger"></span>
+                    </a>
+                </div>
+                <!-- title -->
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-10 bagoo-title-col">
+                    <h1>BAGOO CLOSET</h1>
+                </div>
             </div>
-
-            <!-- title -->
-            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-10 bagoo-title-col">
-                <h1>BAGOO CLOSET</h1>
-            </div>
-
-        </div>
-
         </nav>
-
         <div id="godown">
         </div>
-
         <!-- content and sidebar -->
         <div class="row bagoo-eq-height" id="wrapper">
-
             <!-- sidebar menu -->
             <div class="col-lg-2 col-md-2 col-sm-2">
                 <div id="sidebar-wrapper">
@@ -78,30 +64,26 @@
                     </ul>
                 </div>
             </div>
-
             <!-- content -->
             <div class="col-sm-10">
-
                 <!-- image and attributes -->
                 <div class="row">
-
                     <div class="col-sm-5" id="pic">
-                        <center><img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=60&txt=%5Bimg%5D&w=330&h=340"></center>
+                        <center><img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=60&txt=%5Bimg%5D&w=330&h=340" id="bagoo-display-img"></center>
+                        <span class="glyphicon glyphicon-picture" id="bagoo-add-img"></span>
+                        <input type="file" id="bagoo-file-input" onchange="showImg(this)">
                     </div>
-
                     <!-- attributes -->
                     <div class="col-sm-7">
                         <div class="row">
                             <div class="col-sm-1">
                             </div>
                             <div class="col-sm-10">
-
-
                                 <form class="form-horizontal bagoo-form">
                                     <div class="form-group">
-                                        <label for="inputName" class="col-sm-2 control-label">Name</label>
+                                        <label for="inputKeywords" class="col-sm-2 control-label">Keywords</label>
                                         <div class="col-sm-10">
-                                            <input type="text" class="form-control flat" id="inputName">
+                                            <input type="text" class="form-control flat" id="inputKeywords" title="Separate keywords with commas ','">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -111,8 +93,6 @@
                                                 <option>Shirt</option>
                                                 <option>Pants</option>
                                                 <option>Dress</option>
-                                                <option>Shoes</option>
-                                                <option>Accessory</option>
                                             </select>
                                         </div>
                                     </div>
@@ -129,32 +109,24 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputColour" class="col-sm-2 control-label">Colour</label>
+                                        <label class="col-sm-2 control-label">Colour</label>
                                         <div class="col-sm-10">
-                                            <select multiple="multiple" class="form-control multiselect multiselect-info mbl" id="inputColour">
-                                                <option>Pink</option>
-                                                <option>Yellow</option>
-                                                <option>Black</option>
-                                                <option>Brown</option>
-                                            </select>
+                                            <div class="input-group colorpicker-component colorpicker-element bagoo-colorpicker">
+                                                <input type="text" value="#FFFFFF" class="form-control" />
+                                                <span class="input-group-addon"><i></i></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </form>
-
-
                             </div>
-
                             <!-- end img and attr -->
                         </div>
-
                         <div class="bagoo-space">
                         </div>
-
                         <!-- buttons -->
                         <div class="row bagoo-eq-height-row">
-
                             <div class="col-sm-4 col-xs-4 bagoo-eq-height-col">
-                                <button class="btn btn-default btn-block bagoo-big-btn">SAVE</button>
+                                <button class="btn btn-default btn-block bagoo-big-btn" onclick="saveArticle()">SAVE</button>
                             </div>
                             <div class="col-sm-4 col-xs-4 bagoo-eq-height-col">
                                 <button class="btn btn-default btn-block bagoo-big-btn">Delete</button>
@@ -163,34 +135,28 @@
                                 <button class="btn btn-default btn-block bagoo-big-btn">New Outfit
                                     <br> Using This</button>
                             </div>
-
                             <!-- end buttons -->
                         </div>
-
                     </div>
-
-                    <!-- end content div -->
                 </div>
-
-                <!-- end content and sidebar div -->
+                <!-- end content div -->
             </div>
-
-            <!-- end container div -->
+            <!-- end content and sidebar div -->
         </div>
-
-
-
-        <!-- jQuery -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
-        <!-- Bootstrap Core JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-        <!-- Flat UI -->
-        <script src="../lib/flatUI/dist/js/vendor/video.js"></script>
-        <script src="../lib/flatUI/dist/js/flat-ui.min.js"></script>
-        <!-- Menu Toggle Script -->
-        <script src="../scripts/Controller.js"></script>
-            <!-- Models -->
+        <!-- end container div -->
+    </div>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- Colorpicker -->
+    <script src="../lib/bootstrap-colorpicker-master/dist/js/bootstrap-colorpicker.min.js"></script>
+    <!-- Flat UI -->
+    <script src="../lib/flatUI/dist/js/vendor/video.js"></script>
+    <script src="../lib/flatUI/dist/js/flat-ui.min.js"></script>
+    <!-- Menu Toggle Script -->
+    <script src="../scripts/Controller.js"></script>
+    <!-- Models -->
     <script src="../scripts/models/clothing.js"></script>
     <!-- Controllers -->
     <script src="../scripts/controllers/addClothing-controller.js"></script>
@@ -198,7 +164,6 @@
     <!-- Clothes Manager -->
     <script src="../scripts/models/ClothesManager.js"></script>
     <script src="../scripts/app.js"></script>
-
 </body>
 
 </html>
