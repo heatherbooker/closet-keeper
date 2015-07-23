@@ -31,25 +31,30 @@ function getImgInput() {
     var fileUploadControl = $("#bagoo-file-input")[0];
     if (fileUploadControl.files.length > 0) {
         var file = fileUploadControl.files[0];
-        return file
+        var name = file.name;
+        var imgFile = new Parse.File(name, file)
+        return imgFile
     }
 }
 
 function saveArticle() {
+
     console.log('save function is running')
-        //get all inputs
+
     var imgFile = getImgInput();
     var keywords = getKeywords();
     var articleType = $('select#inputType').val();
     var events = $('select#inputEvent').val();
     var color = $('.bagoo-colorpicker').colorpicker('getValue', '#ffffff');
-    clothesManager.addArticle(keywords, articleType, events, color);
-    clothesManager.updateArticle('tZElqKBcMJ', 'img', imgFile)
+
+    clothesManager.addArticle(keywords, articleType, events, color, imgFile);
 }
 
 function getKeywords() {
+
     var keywords = $('#inputKeywords').val();
     var keywordArray = [];
+
     if (keywords.contains(',')) {
         keywordArray = keywords.split(',');
         for (var i = 0; i < keywordArray.length; i++) {

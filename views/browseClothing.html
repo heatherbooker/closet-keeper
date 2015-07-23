@@ -2,11 +2,8 @@
 <html lang="en">
 
 <head>
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Bagoo Closet | Clothing</title>
-
     <!-- reset browsers -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/normalize.min.css">
     <!-- Bootstrap -->
@@ -20,34 +17,24 @@
     <link rel="stylesheet" href="../styles/browse.css">
     <!-- Parse -->
     <script src="//www.parsecdn.com/js/parse-1.4.2.min.js"></script>
-
 </head>
 
-
 <body>
-
     <div class="container">
-
         <!-- top bar with title and menu icon and search bar-->
-
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-
             <div class="row">
-
                 <!-- menu icon -->
                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 bagoo-skinny-col">
                     <a href="#menu-toggle" class="btn btn-default bagoo-slide-btn" id="menu-toggle">
                         <span class="glyphicon glyphicon-menu-hamburger"></span>
                     </a>
                 </div>
-
                 <!-- title -->
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-10 bagoo-title-col">
                     <h1>BAGOO CLOSET</h1>
                 </div>
-
             </div>
-
             <!-- search bar -->
             <div class="row bagoo-search-bar">
                 <div class="col-sm-3 bagoo-header-col">
@@ -61,17 +48,11 @@
                     </div>
                 </div>
             </div>
-
         </nav>
-
         <div id="godown">
         </div>
-
-
         <!-- content and sidebar -->
         <div class="row" id="wrapper">
-
-
             <!-- sidebar menu -->
             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-0">
                 <div id="sidebar-wrapper">
@@ -94,101 +75,70 @@
                     </ul>
                 </div>
             </div>
-
             <!-- content -->
             <div class="col-lg-10 col-sm-10 col-xs-12">
-
                 <div class="bagoo-space">
                 </div>
-
                 <!-- outfit displays -->
                 <div class="row">
-
-
                     <div class="col-md-3 col-sm-4 col-xs-6" id="div0">
                     </div>
-
                     <div class="col-md-3 col-sm-4 col-xs-6" id="div1">
                     </div>
-
                     <div class="col-md-3 col-sm-4 col-xs-6" id="div2">
                     </div>
-
                     <div class="col-md-3 col-sm-4 col-xs-6" id="div3">
                     </div>
-
                     <div class="col-md-3 col-sm-4 col-xs-6" id="div4">
                     </div>
-
                     <div class="col-md-3 col-sm-4 col-xs-6" id="div5">
                     </div>
-
                     <div class="col-md-3 col-sm-4 col-xs-6" id="div6">
                     </div>
-
                     <div class="col-md-3 col-sm-4 col-xs-6" id="div7">
                     </div>
                     <div class="col-md-3 col-sm-4 col-xs-6" id="div8">
                     </div>
-
                     <div class="col-md-3 col-sm-4 col-xs-6" id="div9">
                     </div>
-
                     <div class="col-md-3 col-sm-4 col-xs-6" id="div10">
                     </div>
-
                     <div class="col-md-3 col-sm-4 col-xs-6" id="div11">
                     </div>
-
                     <div class="col-md-3 col-sm-4 col-xs-6" id="div12">
                     </div>
-
                     <div class="col-md-3 col-sm-4 col-xs-6" id="div13">
                     </div>
-
                     <div class="col-md-3 col-sm-4 col-xs-6" id="div14">
                     </div>
-
                     <div class="col-md-3 col-sm-4 col-xs-6" id="div15">
                     </div>
-
-
                 </div>
-
-
                 <!-- end content div -->
             </div>
-
             <!-- end content and sidebar div -->
         </div>
-
         <!-- end container div -->
     </div>
-
-
-
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
     <!-- Bootstrap Core JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
     <!-- Flat UI -->
     <script src="../lib/flatUI/dist/js/vendor/video.js"></script>
     <script src="../lib/flatUI/dist/js/flat-ui.min.js"></script>
-
     <!-- Menu Toggle Script -->
     <script src="../scripts/Controller.js"></script>
     <!-- Models -->
     <script src="../scripts/models/clothing.js"></script>
     <!-- Controllers -->
-    <script src="../scripts/controllers/addClothing-controller.js"></script>
     <script src="../scripts/controllers/browseClothing-controller.js"></script>
     <!-- Clothes Manager -->
     <script src="../scripts/models/ClothesManager.js"></script>
     <script src="../scripts/app.js"></script>
-    <script>clothesManager.loadClothingDictionary(initialView)</script>
-
+    <script>
+    clothesManager.loadClothingDictionary(initialView)
+    </script>
 </body>
 
 </html>

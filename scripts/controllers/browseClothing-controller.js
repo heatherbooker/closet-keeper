@@ -1,16 +1,8 @@
-//enable pop up text box 
-$(document).ready(function() {
-
-    $('[data-toggle="tooltip"]').tooltip();
-
-});
-
-
-function displayClothing(imageURL, isAnImg, div) {
+function displayClothing(imageURL, objectId, isAnImg, div) {
 
     if (isAnImg) {
 
-        var fillDiv = '<center><img class="img-responsive" src="' + imageURL + '"></center>';
+        var fillDiv = '<center><img class="img-responsive" src="' + imageURL + '" data-id="' + objectId + '" onclick="openForEdit(this)"></center>';
 
     } else if (!isAnImg) {
 
@@ -21,6 +13,12 @@ function displayClothing(imageURL, isAnImg, div) {
 
     document.getElementById(divName).innerHTML = fillDiv;
 
+}
+
+function openForEdit(image) {
+    console.log(image.src)
+    console.log(image.dataset.id)
+    console.log(clothesManager.search(image.dataset.id))
 }
 
 
@@ -34,7 +32,7 @@ function initialView(clothingDictionary) {
 
             if (clothingDictionary[key].attributes.hasOwnProperty("img")) {
 
-                displayClothing(clothingDictionary[key].attributes.img._url, true, i);
+                displayClothing(clothingDictionary[key].attributes.img._url, clothingDictionary[key].id, true, i);
             }
 
             i++;
@@ -49,7 +47,7 @@ function updateView(searchArray) {
 
         if (searchArray[i]) {
 
-            displayClothing(searchArray[i].attributes.img._url, true, i)
+            displayClothing(searchArray[i].attributes.img._url, searchArray[i].id, true, i)
 
         } else {
 
@@ -59,13 +57,10 @@ function updateView(searchArray) {
 }
 
 
-
 function searchByKeyword() {
 
     //get user input
     var searchTerm = document.getElementById('searchBar').value;
-
-    //ASK CLOTHESmanager 
 
     var searchArray = clothesManager.search(searchTerm);
 
