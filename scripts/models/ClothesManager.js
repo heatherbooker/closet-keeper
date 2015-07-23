@@ -76,7 +76,7 @@ function ClothesManager() {
 
         article.set("keywords", keywords);
         article.set("type", type);
-        article.set("use", use);
+        article.set("events", use);
         article.set("color", color);
         article.set("img", imageFile);
 

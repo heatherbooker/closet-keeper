@@ -1,3 +1,4 @@
+//make dropdown pretty
 $("select").select2({
     ".mbl": 'dropdown-inverse'
 });
@@ -7,36 +8,56 @@ $('#bagoo-add-img').click(function() {
     $('#bagoo-file-input').click();
 });
 
-function showImg(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
-        reader.onload = function(e) {
-            $('#bagoo-display-img')
-                .attr('src', e.target.result)
-                .width(330)
-                .height(340);
-        };
-        reader.readAsDataURL(input.files[0]);
-    }
-}
-
 //make colorpicker plugin work
 $(function() {
     $('.bagoo-colorpicker').colorpicker();
 });
 
+
+function showImg(input) {
+    if (input.files && input.files[0]) {
+        var fileReader = new FileReader();
+        fileReader.onload = function(e) {
+            $('#bagoo-display-img')
+                .attr('src', e.target.result)
+                .width(330)
+                .height(340);
+        };
+        fileReader.readAsDataURL(input.files[0]);
+    }
+}
+
+function getImgInput() {
+    var fileUploadControl = $("#bagoo-file-input")[0];
+    if (fileUploadControl.files.length > 0) {
+        var file = fileUploadControl.files[0];
+        return file
+    }
+}
+
 function saveArticle() {
-    //get all inputs
-    var keywords = $('#inputKeywords').val();
+    console.log('save function is running')
+        //get all inputs
+    var imgFile = getImgInput();
+    var keywords = getKeywords();
     var articleType = $('select#inputType').val();
     var events = $('select#inputEvent').val();
     var color = $('.bagoo-colorpicker').colorpicker('getValue', '#ffffff');
-    //$(.colorpicker('getValue')
-    console.log('save function is running')
-    console.log(keywords + articleType + events + color)
+    clothesManager.addArticle(keywords, articleType, events, color);
+    clothesManager.updateArticle('tZElqKBcMJ', 'img', imgFile)
+}
 
-    //check if already exists
-    //if exists, update
-    //if does not exist, create new
-    //tell user save was successful
+function getKeywords() {
+    var keywords = $('#inputKeywords').val();
+    var keywordArray = [];
+    if (keywords.contains(',')) {
+        keywordArray = keywords.split(',');
+        for (var i = 0; i < keywordArray.length; i++) {
+            var trimmed = keywordArray[i].trim();
+            keywordArray[i] = trimmed;
+        }
+    } else {
+        keywordArray.push(keywords.trim());
+    }
+    return keywordArray
 }
